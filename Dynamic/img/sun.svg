@@ -1,0 +1,8 @@
+<svg id="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.8 127.8"><defs>
+  <style>.circle-1{fill:#f9a149;opacity:0.05;}.circle-1,.circle-2,.circle-3,.circle-4{isolation:isolate;}.circle-2{fill:#f9a854;opacity:0.21;}.circle-3{fill:#fab567;opacity:0.52;}.circle-4{fill:#fbc27a;opacity:0.84;}.circle-5{fill:#fff;}</style></defs>
+  <circle class="circle-1" cx="63.9" cy="63.9" r="63.9"/>
+  <circle class="circle-2" cx="63.9" cy="63.9" r="48.7"/>
+  <circle class="circle-3" cx="63.9" cy="63.9" r="34.4"/>
+  <circle class="circle-4" cx="63.9" cy="63.9" r="20.1"/>
+  <circle class="circle-5" cx="63.9" cy="63.9" r="4.6"/>
+</svg>
