@@ -56,24 +56,19 @@
   $("#reflection")[0].setCurrentTime(seconds);
   $("#landscape")[0].setCurrentTime(seconds);
   $(
-    "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .sun:before, .twinkles, .spriteWrap"
+    "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .twinkles, .spriteWrap"
   ).css("animation-delay", "-" + seconds + "s");
-  $("#stars, #starReflection").css("animation-delay", "-" + seconds * 2 + "s");
+  $("#stars, #starReflection").css("animation-delay", ":" + seconds * 2 + "s");
   $("head").append(
-    // Fix opacity
     '<style id="befores">.sun:before{animation-delay:' +
+      "-" +
       seconds +
       "s;} .counter:before{animation-delay:" +
+      "-" +
       seconds +
       "s;}</style>"
   );
   setInterval(function () {
-    // console.log("e");
-    seconds =
-      date.getHours() * 3600 +
-      offset * 3600 +
-      date.getMinutes() * 60 +
-      date.getSeconds();
     /* $("#befores").remove();
     $("body").append(
       '<style id="befores">.sun:before{animation-delay:' +
@@ -86,7 +81,7 @@
     $("#reflection")[0].setCurrentTime(seconds);
     $("#landscape")[0].setCurrentTime(seconds);
     $(
-      "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .sun:before, .twinkles, .spriteWrap"
+      "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .twinkles, .spriteWrap"
     ).css("animation-delay", "-" + seconds + "s");
     $("#stars, #starReflection").css(
       "animation-delay",
