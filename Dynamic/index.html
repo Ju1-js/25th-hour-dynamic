@@ -2131,17 +2131,30 @@
 <div class="spriteWrap"></div>
 
 <!-- control panel -->
-<audio loop controls autoplay hidden id="player">
+<!-- <audio loop controls autoplay hidden id="player">
+                        <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                  </audio> -->
+<div class="controls">  
+      <ul>
+            <li><a href="javascript:history.go(0)">Refresh</a></li>
+            <li>
+                  <span class="title">Audio</span>
+                  <audio loop controls autoplay id="player">
                         <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                   </audio>
+            </li>
+      </ul>
+
+  <div class="counter"></div>
+</div>
 
 
 
 
 
-
-	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery/jquery.min.js"></script>
 	<script src="js/wallpaperEngine.js"></script>
   <script src="js/sprites.js"></script>
 

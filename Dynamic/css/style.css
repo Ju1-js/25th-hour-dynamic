@@ -1,5 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300);
 
+/* Global Variables
+   --------------------------------------------- */
+:root {
+  --cycle-duration: 86400s;
+}
+
 /* Global Styles
   ---------------------------------------------- */
 html {
@@ -9,7 +15,7 @@ html {
   font-size: 100%;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-smoothing: antialiased;
+  font-smooth: antialiased;
   overflow: hidden;
   position: relative;
 }
@@ -49,7 +55,7 @@ a {
 .counter:before,
 #lensFlare,
 .sunMask {
-  animation-duration: 86400s;
+  animation-duration: var(--cycle-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 2s;
@@ -309,7 +315,7 @@ a {
   opacity: 0.5;
 }
 .suncrane {
-  animation: suncrane 86400s linear infinite;
+  animation: suncrane var(--cycle-duration) linear infinite;
   position: absolute;
   width: 21%;
   height: 4%;
@@ -330,19 +336,18 @@ a {
 .sun:before {
   display: block;
   content: " ";
-  animation: glare 86400s linear infinite;
+  animation: glare var(--cycle-duration) linear infinite;
   position: absolute;
   width: 120%;
   height: 120%;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/21555/glare.svg)
-    no-repeat scroll center;
+  background: url(../img/glare.svg) no-repeat scroll center;
   top: -10%;
   left: -10%;
   background-size: 100%;
 }
 
 @keyframes glare {
-  from {
+  0% {
     transform: rotate(0deg);
     opacity: 0;
   }
@@ -358,7 +363,7 @@ a {
   74% {
     opacity: 0;
   }
-  to {
+  100% {
     transform: rotate(800deg);
     opacity: 0;
   }
@@ -395,7 +400,7 @@ a {
   filter: blur(2px);
   opacity: 0.4;
   left: -60%;
-  animation-duration: 86400s;
+  animation-duration: var(--cycle-duration);
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: clouds;
@@ -496,7 +501,7 @@ a {
   position: absolute;
   right: 49.2%;
   top: 72.5%;
-  animation: twinkles 86400s linear infinite;
+  animation: twinkles var(--cycle-duration) linear infinite;
 }
 @keyframes twinkles {
   0% {
@@ -682,7 +687,7 @@ a {
   width: 100%;
   position: absolute;
   z-index: 13;
-  animation: sprites 86400s linear infinite;
+  animation: sprites var(--cycle-duration) linear infinite;
   pointer-events: none;
 }
 @keyframes sprites {
@@ -713,68 +718,78 @@ a {
 
 /* Controls
   ---------------------------------------------- */
-/*.controls{
-    position:absolute;
-    top:0px;
-    width 20%;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.16);
-    height: 100%;
-    width: 380px;
-    padding: 23px;
-    transform: translate3d(-250px, 0px, 0px);
-    -moz-transform: translate3d(-250px, 0px, 0px);
-    -o-transform: translate3d(-250px, 0px, 0px);
-    -ms-transform: translate3d(-250px, 0px, 0px);
-    transform: translate3d(-250px, 0px, 0px);
-    opacity: 0;
-  }
-  .controls, .controls *{
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; transition: all 0.25s ease;
-  }
-  .controls:hover{
-    transform: translate3d(0px, 0px, 0px);
-    -moz-transform: translate3d(0px, 0px, 0px);
-    -o-transform: translate3d(0px, 0px, 0px);
-    -ms-transform: translate3d(0px, 0px, 0px);
-    transform: translate3d(0px, 0px, 0px);
-    opacity: 1.0;
-  }
-  .controls ul{
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-  }
-  .controls ul li{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-    color: white;
-  }
-  .controls ul li span.title{
-    display: inline-block;
-    padding: 10px 0px;
-  }
-  .controls ul li a{
-    display: block;
-    padding: 10px 0px;
-  }
-  .controls ul li a:hover{
-    padding-left: 10px;
-  }
-  .controls ul li a.active{}
-  .controls ul li a.active:after{content: 'on';float: right;}
-  .controls audio{
-    width: 100%;
-    opacity: 0.2;
-    position: relative;
-    width: 80%;
-    display: inline-block;
-    top: 8px;
-    float: right;
-  }
-  .controls audio:hover{opacity:1.0;}*/
+.controls {
+  position: absolute;
+  top: 0px;
+  width: 20%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.16);
+  height: 100%;
+  width: 380px;
+  padding: 23px;
+  transform: translate3d(-250px, 0px, 0px);
+  -moz-transform: translate3d(-250px, 0px, 0px);
+  -o-transform: translate3d(-250px, 0px, 0px);
+  -ms-transform: translate3d(-250px, 0px, 0px);
+  transform: translate3d(-250px, 0px, 0px);
+  opacity: 0;
+}
+.controls,
+.controls * {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.controls:hover {
+  transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
+.controls ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.controls ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  color: white;
+}
+.controls ul li span.title {
+  display: inline-block;
+  padding: 10px 0px;
+}
+.controls ul li a {
+  display: block;
+  padding: 10px 0px;
+}
+.controls ul li a:hover {
+  padding-left: 10px;
+}
+.controls ul li a.active {
+}
+.controls ul li a.active:after {
+  content: "on";
+  float: right;
+}
+.controls audio {
+  width: 100%;
+  opacity: 0.2;
+  position: relative;
+  width: 80%;
+  display: inline-block;
+  top: 8px;
+  float: right;
+}
+.controls audio:hover {
+  opacity: 1;
+}
 .noise {
   width: 100%;
   height: 100%;
@@ -1778,13 +1793,13 @@ a {
 #landscape .layer11 {
   fill: #232323;
   /*animation-name: layer11;
-		animation-duration: 86400s;
+		animation-duration: var(--cycle-duration);
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-delay: 2s;*/
   /*treesway 60s linear 2s infinite*/
   animation: treesway 60s linear 2s infinite,
-    treecolor 86400s linear 2s infinite;
+    treecolor var(--cycle-duration) linear 2s infinite;
 }
 
 @keyframes treecolor {
