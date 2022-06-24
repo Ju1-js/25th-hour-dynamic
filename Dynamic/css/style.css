@@ -2388,4 +2388,8 @@ a {
   .spriteWrap {
     display: none;
   }
+
+  .hide {
+    display: none;
+  }
 }

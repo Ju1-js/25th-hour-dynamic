@@ -68,32 +68,6 @@
       seconds +
       "s;}</style>"
   );
-  /* setInterval(function () { */
-  /* date = new Date();
-    seconds =
-      date.getHours() * 3600 +
-      offset * 3600 +
-      date.getMinutes() * 60 +
-      date.getSeconds(); // Fixed? */
-  /* $("#befores").remove();
-    $("body").append(
-      '<style id="befores">.sun:before{animation-delay:' +
-        seconds +
-        "s;} .counter:before{animation-delay:" +
-        seconds +
-        "s;}</style>"
-    ); */
-  /* $("#sky")[0].setCurrentTime(seconds);
-    $("#reflection")[0].setCurrentTime(seconds);
-    $("#landscape")[0].setCurrentTime(seconds);
-    $(
-      "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .twinkles, .spriteWrap"
-    ).css("animation-delay", "-" + seconds + "s");
-    $("#stars, #starReflection").css(
-      "animation-delay",
-      "-" + seconds * 2 + "s"
-    ); */
-  /* }, 1000); */
 
   function Circle() {
     this.s = {
