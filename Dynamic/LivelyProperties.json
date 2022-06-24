@@ -1,0 +1,21 @@
+{
+  "volume": {
+    "max": 100,
+    "min": 0,
+    "tick": 25,
+    "text": "Audio volume",
+    "type": "slider",
+    "value": 43
+  },
+  "controls-location": {
+    "type": "dropdown",
+    "value": 1,
+    "text": "Settings panel location",
+    "items": ["Left", "Right"]
+  },
+  "controls-visible": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Show controls panel"
+  }
+}
