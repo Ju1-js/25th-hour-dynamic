@@ -1,21 +1,62 @@
-const audio = $("#player");
-const controls = $("#controls"); // id="controls"
+const player = $("#player")[0];
+const controls = $("#controls")[0];
+const debug = $("#debug")[0];
 
-controls.classList.add("hide");
-controls.classList.add("hide");
+function log(message) {
+  debug.textContent += message + "\n";
+}
 
+function clearLog() {
+  debug.textContent = "";
+}
+
+function livelyAudioListener(audioArray) {}
+
+log("Starting...");
 function livelyPropertyListener(name, val) {
+  log(`Name: ${name} Val: ${val}`);
   switch (name) {
-    case "volume":
-      console.log(val);
+    case "audio-volume":
+      log(val / 100);
+      player.volume = val / 100;
+      break;
+    case "audio-play":
+      log(val);
+      switch (val) {
+        case true:
+          player.autoplay = true;
+          player.play();
+          break;
+        case false:
+          player.autoplay = false;
+          player.pause();
+          break;
+
+        default:
+          console.error(`Unknown playback option: ${val}`);
+          break;
+      }
       break;
     case "controls-location":
-      console.log(val);
+      log(val);
+      switch (val) {
+        case 0:
+          controls.classList.add("left");
+          controls.classList.remove("right");
+          break;
+        case 1:
+          controls.classList.add("right");
+          controls.classList.remove("left");
+          break;
+
+        default:
+          console.error(`Unknown settings location option: ${val}`);
+          break;
+      }
       break;
     case "controls-visible":
-      console.log(val);
-      if (val) {
-      }
+      controls.classList.toggle("hide", !val);
+      log(`Visible: ${val} | ${controls.classList}`);
       break;
 
     default:
@@ -23,3 +64,4 @@ function livelyPropertyListener(name, val) {
       break;
   }
 }
+log("Loaded");
