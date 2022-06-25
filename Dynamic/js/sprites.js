@@ -51,7 +51,7 @@
     offset * 3600 +
     date.getMinutes() * 60 +
     date.getSeconds();
-  console.log(`Date: ${date} | Seconds: ${seconds}`);
+  // console.log(`Date: ${date} | Seconds: ${seconds}`);
   $("#sky")[0].setCurrentTime(seconds);
   $("#reflection")[0].setCurrentTime(seconds);
   $("#landscape")[0].setCurrentTime(seconds);
