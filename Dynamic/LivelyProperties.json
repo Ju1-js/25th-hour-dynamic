@@ -1,21 +1,26 @@
 {
-  "volume": {
+  "audio-volume": {
     "max": 100,
     "min": 0,
     "tick": 25,
-    "text": "Audio volume",
+    "text": "Background audio volume",
     "type": "slider",
-    "value": 43
+    "value": 25
+  },
+  "audio-play": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Play background audio"
   },
   "controls-location": {
     "type": "dropdown",
-    "value": 1,
+    "value": 0,
     "text": "Settings panel location",
     "items": ["Left", "Right"]
   },
   "controls-visible": {
     "type": "checkbox",
     "value": true,
-    "text": "Show controls panel"
+    "text": "Show settings panel"
   }
 }
