@@ -11,6 +11,7 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/closebutton.css">
   <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
 </head>
 
@@ -2161,24 +2162,48 @@
                   </audio> -->
   <div class="controls left" id="controls">
     <ul>
-      <li><a href="javascript:history.go(0)">Refresh</a></li>
       <li>
-        <span class="title">Audio</span>
+        <span class="title">Settings</span>
+        <div>
+          <div>Audio</div>
+          <audio id="player" class="video-js indent" loop controls autoplay preload="auto" data-setup="{}">
+            <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg" />
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a
+              web browser that
+              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </audio>
+        </div>
+        <div>
+          <div>Location</div>
+          <div>
+            <button class="button buttonl" onclick="controlsleft();">Left</button>
+            <button class="button buttonr" onclick="controlsright();">Right</button>
 
-        <audio id="player" class="video-js" loop controls autoplay preload="auto" data-setup="{}">
-          <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg" />
-          <p class="vjs-no-js">
-            To view this video please enable JavaScript, and consider upgrading to a
-            web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-          </p>
-        </audio>
-
+            <script>
+              function controlsleft() {
+                livelyPropertyListener("controls-location", 0);
+              }
+              function controlsright() {
+                livelyPropertyListener("controls-location", 1);
+              }
+            </script>
+          </div>
+        </div>
       </li>
+      <li><a href="javascript:history.go(0)">Refresh</a></li>
     </ul>
 
     <div class="counter"></div>
   </div>
+  <span id="closecontainer">
+    <div id="icon" class="Icon close">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </span>
 
   <!-- Debug -->
   <!-- <style>
@@ -2202,6 +2227,7 @@
   <script src="js/LivelyProperties.js"></script>
   <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
   <script src="js/audio.js"></script>
+  <script src="js/closebutton.js"></script>
 
   <script>
 
@@ -2243,8 +2269,9 @@
   - Make settings box option for left or right side (DONE)
   - Refurbished audio player (DONE)
   - Debug log (DONE)
-  - Remove debug log when finished 
-  - Add lively customization settings to controls panel
+  - Remove debug log when finished  (DONE)
+  - Add lively customization settings to controls panel (DONE)
+  - Attempt to fix audio autoplay
 
   Fix timings
   - Sun glare (DONE)

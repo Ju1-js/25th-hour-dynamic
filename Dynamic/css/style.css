@@ -775,6 +775,14 @@ a {
   transform: translate3d(0px, 0px, 0px);
   opacity: 1;
 }
+.controls.hover {
+  transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+}
 .controls ul {
   margin: 0px;
   padding: 0px;
@@ -784,16 +792,24 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.09);
   color: white;
 }
+.controls ul li > * {
+  padding: 5px;
+}
 .controls ul li span.title {
   display: inline-block;
   padding: 10px 0px;
+}
+.title {
+  font-size: large;
+  font-weight: bold;
 }
 .controls ul li a {
   display: block;
   padding: 10px 0px;
 }
 .controls ul li a:hover {
-  padding-left: 10px;
+  /*padding-left: 10px;*/
+  font-weight: bold;
 }
 .controls ul li a.active {
 }
@@ -2449,4 +2465,37 @@ a {
   .spriteWrap {
     display: none;
   }
+}
+
+.button {
+  opacity: 1;
+  width: 94px;
+  height: 40px;
+  /*padding: 8px 32px;*/
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  /*transition-duration: 0.2s;*/
+  cursor: pointer;
+  background-color: #1e242c;
+  color: white;
+  border: 3px solid transparent;
+}
+.button:hover {
+  background-color: #dedede;
+  opacity: 1;
+}
+.button:active {
+  background-color: #949494;
+}
+
+.buttonl {
+  border-radius: 1em 0em 0em 1em;
+  margin: 0px -5px 0px 0px;
+}
+
+.buttonr {
+  border-radius: 0em 1em 1em 0em;
+  margin: 0px 0px 0px -5px;
 }
