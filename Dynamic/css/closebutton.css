@@ -6,30 +6,25 @@
   --transition-time: 0.2s;
 }
 
-html {
-  height: 100%;
+#closecontainer {
+  position: absolute;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
 }
-body {
-  height: 100%;
+
+#closecontainer.L {
+  left: 0px;
 }
-.closecontainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
-  font-family: "Helvetica Neue";
-  background: #59489d;
+
+#closecontainer.R {
+  right: 0px;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
+
 .Icon {
   z-index: 900 !important;
   width: calc(var(--size) * 1px);
   height: calc(var(--size) * 1px);
-  position: relative;
+  position: absolute;
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
