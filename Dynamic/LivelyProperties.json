@@ -9,7 +9,7 @@
   },
   "audio-play": {
     "type": "checkbox",
-    "value": true,
+    "value": false,
     "text": "Play background audio"
   },
   "controls-location": {
@@ -20,7 +20,7 @@
   },
   "controls-visible": {
     "type": "checkbox",
-    "value": true,
+    "value": false,
     "text": "Show settings panel"
   }
 }

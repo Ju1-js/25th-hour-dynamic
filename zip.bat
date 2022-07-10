@@ -1,0 +1,1 @@
+for /d %%X in (*) do "C:\Program Files\7-Zip\7z.exe" a "C:\Users\jlaur\Documents\GitHub\25th hour dynamic\Export\25th Hour Dynamic.zip" "C:\Users\jlaur\Documents\GitHub\25th hour dynamic\Dynamic\*"
