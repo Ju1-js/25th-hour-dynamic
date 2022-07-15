@@ -2166,29 +2166,22 @@
         <span class="title">Settings</span>
         <div>
           <div>Audio</div>
-          <audio id="player" class="video-js indent" loop controls autoplay preload="auto" data-setup="{}">
-            <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg" />
-            <p class="vjs-no-js">
-              To view this video please enable JavaScript, and consider upgrading to a
-              web browser that
-              <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-          </audio>
+          <div id="audiocontainer">
+            <audio id="player" class="video-js indent" loop controls autoplay preload="auto" data-setup="{}">
+              <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg" />
+              <p class="vjs-no-js">
+                To hear this audio please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 audio</a>
+              </p>
+            </audio>
+          </div>
         </div>
         <div>
           <div>Location</div>
           <div>
             <button class="button buttonl" onclick="controlsleft();">Left</button>
             <button class="button buttonr" onclick="controlsright();">Right</button>
-
-            <script>
-              function controlsleft() {
-                livelyPropertyListener("controls-location", 0);
-              }
-              function controlsright() {
-                livelyPropertyListener("controls-location", 1);
-              }
-            </script>
           </div>
         </div>
       </li>
@@ -2230,30 +2223,7 @@
   <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/closebutton.js"></script>
-
-  <script>
-
-    jQuery(document).ready(function ($) {
-
-      // Slow load in
-      $('audio')[0].volume = parseFloat(volume);
-
-      setTimeout(function () {
-        $('body').addClass('loaded');
-      }, 2000);
-
-
-      // close modal
-      $('a.closeModal').on('click', function (event) {
-        event.preventDefault();
-        $('.modal').addClass('close');
-      });
-
-    });
-
-
-
-  </script>
+  <script src="js/utils.js"></script>
 
   <!--
 
@@ -2273,8 +2243,9 @@
   - Debug log (DONE)
   - Remove debug log when finished  (DONE)
   - Add lively customization settings to controls panel (DONE)
-  - Make x button follow settings panel
+  - Make x button follow settings panel (DONE)
   - Hide x after a few seconds (DONE)
+  - Disable audio tag when audio is disabled
 
   Fix timings
   - Sun glare (DONE)
