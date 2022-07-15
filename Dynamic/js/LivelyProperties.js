@@ -27,10 +27,12 @@ function livelyPropertyListener(name, val) {
         case true:
           player.autoplay = true;
           player.play();
+          videojs("player").muted(false);
           break;
         case false:
           player.autoplay = false;
           player.pause();
+          videojs("player").muted(true);
           break;
 
         default:
