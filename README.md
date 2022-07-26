@@ -14,7 +14,7 @@ A dynamic port of [The 25th Hour][25th-hour] animation by [Louis Coyle][louis-co
 
 ## License
 
-25th-hour is [licensed under an MIT license][license].
+25th-hour-dynamic is [licensed under an MIT license][license].
 
 [25th-hour]: http://louie.co.nz/25th_hour/
 [louis-coyle]: https://louie.co.nz/
