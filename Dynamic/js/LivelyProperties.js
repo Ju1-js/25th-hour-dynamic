@@ -11,7 +11,7 @@ function clearLog() {
   debug.textContent = "";
 } */
 
-function livelyAudioListener(audioArray) {}
+// function livelyAudioListener(audioArray) {}
 
 // log("Starting...");
 function livelyPropertyListener(name, val) {
