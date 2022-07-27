@@ -1,6 +1,8 @@
 const player = $("#player")[0];
 const controls = $("#controls")[0];
 const Closecontainer = $("#closecontainer")[0];
+var offset = 0;
+var volume = 0.25;
 // const debug = $("#debug")[0];
 
 /* function log(message) {
@@ -17,9 +19,31 @@ function clearLog() {
 function livelyPropertyListener(name, val) {
   // log(`Name: ${name} Val: ${val}`);
   switch (name) {
-    case "audio-volume":
-      // log(val / 100);
-      player.volume = val / 100;
+    case "tree-animation-play":
+      switch (val) {
+        case true:
+          $("#landscape .layer11").css(
+            "animation",
+            "treesway 60s linear 2s infinite, treecolor 86400s linear 2s infinite"
+          );
+          setCorrectTime();
+          break;
+        case false:
+          $("#landscape .layer11").css(
+            "animation",
+            "treecolor 86400s linear 2s infinite"
+          );
+          setCorrectTime();
+          break;
+
+        default:
+          console.error(`Unknown animation playback option: ${val}`);
+          break;
+      }
+      break;
+    case "offset":
+      offset = val / 2;
+      setCorrectTime();
       break;
     case "audio-play":
       // log(val);
@@ -36,9 +60,18 @@ function livelyPropertyListener(name, val) {
           break;
 
         default:
-          console.error(`Unknown playback option: ${val}`);
+          console.error(`Unknown audio playback option: ${val}`);
           break;
       }
+      break;
+    case "audio-volume":
+      // log(val / 100);
+      player.volume = val / 100;
+      break;
+    case "controls-visible":
+      controls.classList.toggle("hide", !val);
+      Closecontainer.classList.toggle("hide", !val);
+      // log(`Visible: ${val} | ${controls.classList}`);
       break;
     case "controls-location":
       // log(val);
@@ -61,15 +94,10 @@ function livelyPropertyListener(name, val) {
           break;
       }
       break;
-    case "controls-visible":
-      controls.classList.toggle("hide", !val);
-      Closecontainer.classList.toggle("hide", !val);
-      // log(`Visible: ${val} | ${controls.classList}`);
-      break;
 
     default:
       console.error(`Unknown customization option: ${name}`);
       break;
   }
 }
-// log("Loaded");
+// log("Settings Loaded");
