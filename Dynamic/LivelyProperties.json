@@ -1,4 +1,26 @@
 {
+  "tree-animation-play": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Play tree animation"
+  },
+  "offset": {
+    "max": 24,
+    "min": -24,
+    "tick": 2,
+    "text": "Time Offset (Half-hour increments, lines represent hours)",
+    "type": "slider",
+    "value": 0
+  },
+  "audio-play": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Play background audio"
+  },
+  "audio-tip": {
+  "type": "label",
+  "value": "Tip: Only enable this option on one wallpaper if you use\nit multiple times, otherwise the audio will sound weird."
+  },
   "audio-volume": {
     "max": 100,
     "min": 0,
@@ -7,20 +29,15 @@
     "type": "slider",
     "value": 25
   },
-  "audio-play": {
+  "controls-visible": {
     "type": "checkbox",
     "value": false,
-    "text": "Play background audio"
+    "text": "Show settings panel"
   },
   "controls-location": {
     "type": "dropdown",
     "value": 0,
     "text": "Settings panel location",
     "items": ["Left", "Right"]
-  },
-  "controls-visible": {
-    "type": "checkbox",
-    "value": false,
-    "text": "Show settings panel"
   }
 }

@@ -1,37 +1,27 @@
-var offset = 1;
-var volume = 0.2;
-var runAnimations = true;
+setCorrectTime();
 
-window.wallpaperPropertyListener = {
-  applyUserProperties: function (properties) {
-    if (properties.volume) {
-      volume = properties.volume.value / 100;
-      $("audio")[0].volume = parseFloat(volume);
-      console.log(volume);
-    }
-
-    if (properties.offset) {
-      offset = properties.offset.value;
-      console.log(offset);
-    }
-
-    runAnimations = properties.animations.value;
-    if (!runAnimations) {
-      $("#landscape .layer11").css(
-        "animation",
-        "treecolor 86400s linear 2s infinite"
-      );
-    } else {
-      $("#landscape .layer11").css(
-        "animation",
-        "treesway 60s linear 2s infinite, treecolor 86400s linear 2s infinite"
-      );
-    }
-  },
-  setPaused: function (paused) {
-    if (paused) $("audio")[0].pause();
-    else {
-      $("audio")[0].play();
-    }
-  },
-};
+function setCorrectTime() {
+  var date = new Date();
+  var seconds =
+    date.getHours() * 3600 +
+    offset * 3600 +
+    date.getMinutes() * 60 +
+    date.getSeconds();
+  // console.log(`Date: ${date} | Seconds: ${seconds}`);
+  $("#sky")[0].setCurrentTime(seconds);
+  $("#reflection")[0].setCurrentTime(seconds);
+  $("#landscape")[0].setCurrentTime(seconds);
+  $(
+    "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .twinkles, .spriteWrap"
+  ).css("animation-delay", "-" + seconds + "s");
+  $("#stars, #starReflection").css("animation-delay", ":" + seconds * 2 + "s");
+  $("head").append(
+    '<style id="befores">.sun:before{animation-delay:' +
+      "-" +
+      seconds +
+      "s;} .counter:before{animation-delay:" +
+      "-" +
+      seconds +
+      "s;}</style>"
+  );
+}
