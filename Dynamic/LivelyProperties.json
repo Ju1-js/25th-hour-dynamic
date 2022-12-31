@@ -8,7 +8,7 @@
     "max": 24,
     "min": -24,
     "tick": 2,
-    "text": "Time Offset (Half-hour increments, lines represent hours)",
+    "text": "Time Offset - Half-hour increments",
     "type": "slider",
     "value": 0
   },
@@ -18,8 +18,8 @@
     "text": "Play background audio"
   },
   "audio-tip": {
-  "type": "label",
-  "value": "Tip: Only enable this option on one wallpaper if you use\nit multiple times, otherwise the audio will sound weird."
+    "type": "label",
+    "value": "Tip: Only enable this option on one wallpaper if you use\nit multiple times, otherwise the audio will sound weird."
   },
   "audio-volume": {
     "max": 100,
