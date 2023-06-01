@@ -1,0 +1,7 @@
+# Ignore all .zip files
+*.zip
+# Ignore everything in every subdirectory except Dynamic, Export, and 25th_hour
+!Dynamic/
+!Export/
+!25th_hour/
+*/*

@@ -1,4 +1,8 @@
 {
+  "label-1": {
+    "type": "label",
+    "value": "-= The 25th Hour =-"
+  },
   "tree-animation-play": {
     "type": "checkbox",
     "value": true,
@@ -39,5 +43,128 @@
     "value": 0,
     "text": "Settings panel location",
     "items": ["Left", "Right"]
+  },
+  "label-2": {
+    "type": "label",
+    "value": "-= Music Visualiser =-"
+  },
+  "visualiser-toggle": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Enable music visualiser"
+  },
+  "visualiser-location": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Visualiser location",
+    "items": [
+      "Center",
+      "Top Left",
+      "Top Right",
+      "Bottom Left",
+      "Bottom Right"
+    ]
+  },
+  "label-3": {
+    "type": "label",
+    "value": "-= Clock =-"
+  },
+  "clock-toggle": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Enable clock"
+  },
+  "clock-location": {
+    "type": "dropdown",
+    "value": 3,
+    "text": "Clock location",
+    "items": [
+      "Center",
+      "Top Left",
+      "Top Right",
+      "Bottom Left",
+      "Bottom Right"
+    ]
+  },
+  "clock-24h": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Use 24-hour clock"
+  },
+  "clock-seconds": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Show seconds"
+  },
+  "clock-date": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Show date"
+  },
+  "clock-date-format": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Date format",
+    "items": [
+      "DD/MM/YYYY",
+      "MM/DD/YYYY",
+      "YYYY/MM/DD"
+    ]
+  },
+  "clock-date-separator": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Date separator",
+    "items": [
+      "/",
+      "-",
+      ".",
+      " "
+    ]
+  },
+  "label-4": {
+    "type": "label",
+    "value": "-= Weather =-"
+  },
+  "weather-toggle": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Enable weather"
+  },
+  "weather-location": {
+    "type": "dropdown",
+    "value": 1,
+    "text": "Weather location",
+    "items": [
+      "Center",
+      "Top Left",
+      "Top Right",
+      "Bottom Left",
+      "Bottom Right"
+    ]
+  },
+  "apiInput": {
+    "text": "API Key",
+    "type": "textbox",
+    "value": "openweathermap.org key"
+  },
+  "cityInput": {
+    "text": "Location",
+    "type": "textbox",
+    "value": "city, country"
+  },
+  "unit": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Unit",
+    "items": [
+      "Metric",
+      "Imperial"
+    ]
+  },
+  "btnRefresh" : {
+    "text" : "Click to Update",
+    "type" : "button",
+    "value" : "Refresh"
   }
 }
