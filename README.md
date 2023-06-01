@@ -5,7 +5,7 @@ A dynamic port of [The 25th Hour][25th-hour] animation by [Louis Coyle][louis-co
 ## Installation Instructions:
 
 1. Download and install [Lively Wallpaper][lively] ([Latest Release][latest-lively-release])
-2. Start **Lively Wallpaper** and **Right Click** it's icon in the tray  <img src="https://rocksdanister.github.io/lively/images/logo.png" alt="Lively Wallpaper's Icon" align="center" width="20x"/>
+2. Start **Lively Wallpaper** and **Right Click** it's icon in the tray  <img src="https://raw.githubusercontent.com/rocksdanister/lively/gh-pages/assets/logo.webp" alt="Lively Wallpaper's Icon" align="center" width="20x"/>
 3. Download the latest release of the wallpaper: [Latest release page][latest-release] | [Direct Download][latest-release-download]
 3. Select "**Open Lively**"
 4. Click "Add Wallpaper"
