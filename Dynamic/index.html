@@ -2150,20 +2150,20 @@
   </div>
 
   <!-- noise overlay -->
-  <div class="noise"></div>
+  <div class="noise hide"></div>
 
   <!-- sprites -->
   <div class="spriteWrap"></div>
 
   <!-- control panel -->
-  <div class="controls left" id="controls">
+  <div class="controls left hide" id="controls">
     <ul>
       <li>
         <span class="title">Settings</span>
         <div>
           <div>Audio</div>
           <div id="audiocontainer">
-            <audio id="player" class="video-js indent" loop controls autoplay muted preload="auto" data-setup="{}">
+            <audio id="player" class="video-js indent" loop controls preload="none" data-setup="{}">
               <source src="audio/Singing_Bowls_Throat.mp3" type="audio/mpeg" />
               <p class="vjs-no-js">
                 To hear this audio please enable JavaScript, and consider upgrading to a
@@ -2188,7 +2188,7 @@
   </div>
   <span>
     <span id="closecontainer">
-      <div id="icon" class="Icon close">
+      <div id="icon" class="Icon right">
         <span></span>
         <span></span>
         <span></span>
