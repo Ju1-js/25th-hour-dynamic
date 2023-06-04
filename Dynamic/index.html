@@ -12,7 +12,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/closebutton.css">
-  <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/video.js@7/dist/video-js.min.css">
+  <link rel="stylesheet" href="css/visualiser.css">
 </head>
 
 <body>
@@ -2187,6 +2188,16 @@
     </span>
   </span>
 
+  <!-- Music Visualiser (z-index: 8) -->
+  <div class="visualiser">
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <div class="center">
+      <img id="albumart" alt="" />
+      <span><h1>Waiting for media... <span></span></h1>
+      <h2></h2></span>
+    </div>
+  </div>
+
   <!-- Debug -->
   <!-- <style>
     #debug {
@@ -2204,14 +2215,14 @@
   <pre id="debug"></pre> -->
 
   <script src="js/jquery/jquery.min.js"></script>
-  <script src="js/LivelyProperties.js"></script>
+  <script src="js/visualiser.js" defer></script>
+  <script src="js/LivelyProperties.js" defer></script>
   <script src="js/fastForward.js"></script>
   <script src="js/sprites.js"></script>
   <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/closebutton.js"></script>
   <script src="js/utils.js"></script>
-
 </body>
 
 </html>
