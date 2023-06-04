@@ -84,8 +84,8 @@ document.getElementById("albumart").src = defaultAlbumArt;
 function livelyCurrentTrack(data) {
     let obj = JSON.parse(data);
     if (obj != null) {
-        visualiser.classList.remove("playing");
-        visualiser.classList.add("not-playing");
+        visualiser.classList.remove("not-playing");
+        visualiser.classList.add("playing");
         document.querySelector("h2").innerText = obj.AlbumArtist;
         document.querySelector("h2").innerText = obj.Artist;
         document.querySelector("h1").innerText = obj.Title;
