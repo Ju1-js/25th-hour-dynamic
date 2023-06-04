@@ -1,8 +1,8 @@
 {
-  "AppVersion": "2.0.2.4",
-  "Title": "25th Hour Dynamic BETA",
-  "Thumbnail": "tx4krkw0.jpg",
-  "Preview": "4ld4xdn4.gif",
+  "AppVersion": "2.0.6.6",
+  "Title": "25th Hour Dynamic",
+  "Thumbnail": "thumbnail.png",
+  "Preview": "preview.gif",
   "Desc": "All credit for the design and animation goes to Louis Coyle, this is just a dynamic port with some quality of life features.",
   "Author": "Louis Coyle, Ju1-js",
   "License": "MIT",

@@ -16,6 +16,11 @@
     "type": "slider",
     "value": 0
   },
+  "pixel-noise": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Add some pixel noise"
+  },
   "audio-play": {
     "type": "checkbox",
     "value": false,

@@ -1,6 +1,7 @@
 const player = $("#player")[0];
 const controls = $("#controls")[0];
 const Closecontainer = $("#closecontainer")[0];
+const pixelNoise = $(".noise")[0];
 var offset = 0;
 var volume = 0.25;
 const debug = $("#debug")[0];
@@ -94,6 +95,9 @@ function livelyPropertyListener(name, val) {
           console.error(`Unknown settings location option: ${val}`);
           break;
       }
+      break;
+    case "pixel-noise":
+      pixelNoise.classList.toggle("hide", !val);
       break;
 
     default:
