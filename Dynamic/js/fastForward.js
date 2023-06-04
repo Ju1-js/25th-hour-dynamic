@@ -22,9 +22,4 @@ function setCorrectTime() {
       seconds +
       "s;}</style>"
   );
-  if (enableSprite) {
-    $(".spriteWrap").css("animation-delay", "0s");
-  } else {
-    $(".spriteWrap").css("animation-delay", "-" + seconds + "s");
-  }
 }

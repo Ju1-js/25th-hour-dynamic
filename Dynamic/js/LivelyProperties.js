@@ -100,10 +100,6 @@ function livelyPropertyListener(name, val) {
     case "pixel-noise":
       pixelNoise.classList.toggle("hide", !val);
       break;
-    case "fireflies-24-7":
-      enableSprite = val;
-      setCorrectTime();
-      break;
     default:
       // console.error(`Unknown customization option: ${name}`);
       break;
