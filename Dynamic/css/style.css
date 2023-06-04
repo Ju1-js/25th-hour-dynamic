@@ -687,9 +687,13 @@ a {
   width: 100%;
   position: absolute;
   z-index: 13;
-  animation: sprites var(--cycle-duration) linear infinite;
   pointer-events: none;
 }
+
+.spriteWrap-animation {
+  animation: sprites var(--cycle-duration) linear infinite;
+}
+
 @keyframes sprites {
   0% {
     opacity: 0.8;

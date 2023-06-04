@@ -17,6 +17,11 @@
     "value": false,
     "text": "Add some pixel noise"
   },
+  "247-sprites": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Show fireflies 24/7"
+  },
   "audio-play": {
     "type": "checkbox",
     "value": false,
