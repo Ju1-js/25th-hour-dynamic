@@ -15,6 +15,8 @@
   <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
   
   <link rel="stylesheet" href="css/media-parallax.css">
+  <link rel="stylesheet" href="css/clock-weather.css">
+  <link rel="stylesheet" href="css/visualiser.css">
   <!-- <script src="js/vis/color-thief.umd.js"></script> -->
   <script src="js/jquery/jquery.min.js"></script>
   <script src="js/vis/script.js" defer></script>
@@ -31,7 +33,7 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
 
 
-  <!-- Stars -->
+  <!-- Stars (z-index: 2) -->
   <div class="stars">
     <div class="starWrap starProject">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 599.456 593.71"
@@ -1140,7 +1142,7 @@
     </div>
   </div>
 
-  <!-- sky gradient -->
+  <!-- sky gradient (z-index: 2) -->
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" id="sky">
     <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
 
@@ -1174,7 +1176,7 @@
     <rect id="sky-rect" x="0" y="0" width="100%" height="100%" style="fill:url(#skyGradient)" />
   </svg>
 
-  <!-- reflection gradient -->
+  <!-- reflection gradient (z-index: 4) -->
   <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" id="reflection">
     <linearGradient id="reflect" x1="0%" y1="0%" x2="0%" y2="100%">
 
@@ -1214,7 +1216,7 @@
   </svg>
   <!-- end reflection gradient -->
 
-  <!-- Landscape -->
+  <!-- Landscape (z-index: 5) -->
   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 539.6 174.9"
     enable-background="new 0 0 539.6 174.9" xml:space="preserve" id="landscape">
 
@@ -2015,7 +2017,7 @@
   </svg>
   <section id="bottom"></section>
 
-  <!--  Stag  -->
+  <!--  Stag (z-index: 5) -->
   <div id="stag">
 
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 38.2 32.8"
@@ -2046,7 +2048,7 @@
     </svg>
   </div>
 
-  <!--  Sun  -->
+  <!--  Sun (z-index: 4) -->
   <div class="sunMask">
     <div class="suncrane">
       <div class="sun">
@@ -2056,7 +2058,7 @@
   </div>
   </div>
 
-  <!-- Clouds -->
+  <!-- Clouds (z-index: 4) -->
   <div class="clouds">
     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0"
       viewBox="0 0 971.91 106.43" enable-background="new 0 0 971.905 106.431" xml:space="preserve">
@@ -2087,7 +2089,7 @@
     </svg>
   </div>
 
-  <!-- Lighting -->
+  <!-- Lighting (z-index: 8) -->
   <div class="lighting">
     <div class="suncrane">
       <svg version="1.1" id="lensFlare" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 684.9 116"
@@ -2108,10 +2110,10 @@
     </div>
   </div>
 
-  <!-- Vignette -->
+  <!-- Vignette (z-index: 9) -->
   <div class="vignette"></div>
 
-  <!-- Sun on lake twinkles -->
+  <!-- Sun on lake twinkles (z-index: 4) -->
   <div class="twinkleWrap">
     <div class="twinkles">
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 28.2 75.1"
@@ -2154,13 +2156,13 @@
     </div>
   </div>
 
-  <!-- noise overlay -->
+  <!-- noise overlay (z-index: 9) -->
   <div class="noise hide"></div>
 
-  <!-- sprites -->
+  <!-- sprites (z-index: 13) -->
   <div class="spriteWrap"></div>
 
-  <!-- control panel -->
+  <!-- control panel (z-index: 10) -->
   <div class="controls left hide" id="controls">
     <ul>
       <li>
@@ -2201,7 +2203,7 @@
     </span>
   </span>
 
-  <!-- Music Visualiser -->
+  <!-- Music Visualiser (z-index: 8) -->
   <div class="visualiser">
     <canvas id="canvas" width="300" height="300"></canvas>
     <div class="center">
@@ -2216,7 +2218,7 @@
     </div> -->
   </div>
 
-  <!-- Clock & Weather -->
+  <!-- Clock & Weather (z-index: 8) -->
   <div class="info-container">
     <div class="clock">
       <span class="time"></span>
@@ -2230,13 +2232,13 @@
     </div>
   </div>
 
-  <!-- System Information -->
+  <!-- System Information (z-index: 8) -->
   <div class="sysinfo-container">
-    <div style="z-index: 100; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 20%;" >
+    <div style="z-index: 8; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 20%;" >
       <canvas id="cpuChart" />				
     </div>
   
-    <div style="z-index: 100; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 0%;">
+    <div style="z-index: 8; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 0%;">
       <canvas id="gpuChart" />
     </div>
   
@@ -2259,7 +2261,6 @@
   <style>
     #debug {
             z-index: 99 !important;
-            display: none;
             position: absolute;
             top: 0;
             right: 0;

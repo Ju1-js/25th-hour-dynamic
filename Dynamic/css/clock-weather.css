@@ -1,33 +1,14 @@
-
-body {
-    margin: 0;
-    color: #fff;
-    font-family: Monospace;
-    font-size: 13px;
-    line-height: 24px;
-    overscroll-behavior: none;
-    overflow: hidden;
-    user-select: none;
-}  
-
-body > div.visualiser > div > span > h1 {
-margin-top: 13px;
-}
-
-canvas {
-    display: block;
-}
-
 /* ----------- Clock ----------- */
 .info-container { 
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 20px;
-    z-index: 400;
+    z-index: 8;
     font-size: xxx-large;
     font-weight: 900;
     color: white;
+    opacity: 0.7;
     font-family: monospace;
 }
 .clock {

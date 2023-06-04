@@ -1,5 +1,3 @@
-setCorrectTime();
-
 function setCorrectTime() {
   var date = new Date();
   var seconds =
@@ -12,7 +10,7 @@ function setCorrectTime() {
   $("#reflection")[0].setCurrentTime(seconds);
   $("#landscape")[0].setCurrentTime(seconds);
   $(
-    "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .twinkles, .spriteWrap"
+    "#landscape, .land, #bottom, .stags, .stag, .counter:before, #lensFlare, .sunMask, .clouds svg, .suncrane, .twinkles"
   ).css("animation-delay", "-" + seconds + "s");
   $("#stars, #starReflection").css("animation-delay", ":" + seconds * 2 + "s");
   $("head").append(
@@ -24,4 +22,9 @@ function setCorrectTime() {
       seconds +
       "s;}</style>"
   );
+  if (enableSprite) {
+    $(".spriteWrap").css("animation-delay", "0s");
+  } else {
+    $(".spriteWrap").css("animation-delay", "-" + seconds + "s");
+  }
 }

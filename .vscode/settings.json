@@ -1,5 +1,26 @@
 {
     "files.exclude": {
-        "**/f2gfov4p.waf": true
+        "**/*.zip": true,
+        "Dynamic/**": false,
+        "**/0wj1biqk.f41": true,
+        "**/1lzdkpe2.yez": true,
+        "**/4obolwxa.lie": true,
+        "**/4yvhquwl.pcv": true,
+        "**/4zxbgz4g.jnx": true,
+        "**/abqqpcp4.hv3": true,
+        "**/dhedda5q.cf2": true,
+        "**/zmijuhra.1n3": true,
+        "**/fl3ivp32.oaj": true,
+        "**/g21ruk0a.yx1": true,
+        "**/if2hulsm.y5c": true,
+        "**/iqdvd4pt.jyo": true,
+        "**/lgz4xpht.sjn": true,
+        "**/mrn3a0m5.0lk": true,
+        "**/nps35xrp.5eh": true,
+        "**/ptpcxvcd.hlz": true,
+        "**/rtnm43pj.wyl": true,
+        "**/wxqfmbno.3vk": true,
+        "**/xn0quq52.bq2": true,
+        "**/3kq3y20d.lps": true
     }
 }

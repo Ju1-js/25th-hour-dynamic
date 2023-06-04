@@ -19,7 +19,7 @@ div.visualiser {
     justify-content: center;
     /* align-items: center; */
     position: relative;
-    z-index: 100;
+    z-index: 8;
 }
 
 .visualiser .blur {
@@ -29,12 +29,12 @@ div.visualiser {
     left: 0;
     top: 0;
     backdrop-filter: saturate(180%) blur(8px);
-    z-index: 1000;
+    z-index: 8;
 }
 
 .visualiser .shadow {
     position: fixed;
-    z-index: 1001;
+    z-index: 8;
     top: 4%;
     left: 2%;
     min-width: 100%;
@@ -83,7 +83,7 @@ div.visualiser {
     }
     .center {
     text-align: center;
-    z-index: 1;
+    z-index: 8;
     }
     .center span {
     height: 0;

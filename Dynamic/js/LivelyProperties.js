@@ -3,6 +3,7 @@ const controls = $("#controls")[0];
 const Closecontainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
 var offset = 0;
+var enableSprite = false;
 var volume = 0.25;
 const debug = $("#debug")[0];
 
@@ -99,7 +100,10 @@ function livelyPropertyListener(name, val) {
     case "pixel-noise":
       pixelNoise.classList.toggle("hide", !val);
       break;
-
+    case "fireflies-24-7":
+      enableSprite = val;
+      setCorrectTime();
+      break;
     default:
       // console.error(`Unknown customization option: ${name}`);
       break;
