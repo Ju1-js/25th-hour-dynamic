@@ -2,6 +2,7 @@ const player = $("#player")[0];
 const controls = $("#controls")[0];
 const Closecontainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
+const spriteWrap = $(".spriteWrap")[0];
 var offset = 0;
 var volume = 0.25;
 // const debug = $("#debug")[0];
@@ -68,6 +69,9 @@ function livelyPropertyListener(name, val) {
     case "audio-volume":
       // log(val / 100);
       player.volume = val / 100;
+      break;
+    case "247-sprites":
+      spriteWrap.classList.toggle("spriteWrap-animation", !val);
       break;
     case "controls-visible":
       controls.classList.toggle("hide", !val);
