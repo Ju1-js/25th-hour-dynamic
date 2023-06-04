@@ -22,21 +22,25 @@
     "value": false,
     "text": "Show fireflies 24/7"
   },
-  
-  "labelVisualiser": {
+  "label-visualiser": {
     "type": "label",
-    "value": "Music Visualiser Settings"
+    "value": "Music Visualiser settings"
   },
   "visualiser-toggle": {
     "type": "checkbox",
     "value": false,
     "text": "Enable music visualiser"
   },
-  "labelSpectrum": {
+  "show-when-not-playing": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Show visualiser when not playing"
+  },
+  "label-spectrum": {
     "type": "label",
     "value": "Spectrum settings"
   },
-  "verticalScale": {
+  "vertical-scale": {
     "max": 50,
     "min": 0,
     "tick": 8,
@@ -45,7 +49,7 @@
     "type": "slider",
     "value": 10
   },
-  "dotScale": {
+  "dot-scale": {
     "max": 5,
     "min": 0,
     "tick": 1,
@@ -54,7 +58,7 @@
     "type": "slider",
     "value": 1
   },
-  "sortingMode": {
+  "sorting-mode": {
     "type": "dropdown",
     "value": 2,
     "text": "Spectrum mode",

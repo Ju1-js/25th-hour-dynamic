@@ -6,6 +6,7 @@ const spriteWrap = $(".spriteWrap")[0];
 const visualiser = $(".visualiser")[0];
 var offset = 0;
 var volume = 0.25;
+var showWhenNotPlaying = false;
 // const debug = $("#debug")[0];
 
 /* function log(message) {
@@ -103,7 +104,13 @@ function livelyPropertyListener(name, val) {
     case "pixel-noise":
       pixelNoise.classList.toggle("hide", !val);
       break;
-    case "sortingMode":
+    case "visualiser-toggle":
+      visualiser.classList.toggle("hide", !val);
+      break;
+    case "show-when-not-playing":
+      visualiser.classList.toggle("show-when-not-playing", !val);
+      break;
+    case "sorting-mode":
       switch (val) {
         case 0:
           sortSoundArray = concentratedSort;
@@ -120,15 +127,12 @@ function livelyPropertyListener(name, val) {
       }
       calcDotSize();
       break;
-    case "verticalScale":
+    case "vertical-scale":
       verticalScale = val;
       break;
-    case "dotScale":
+    case "dot-scale":
       dotScale = val;
       calcDotSize();
-      break;
-    case "visualiser-toggle":
-      visualiser.classList.toggle("hide", !val);
       break;
     default:
       console.error(`Unknown customization option: ${name}`);

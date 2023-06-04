@@ -84,6 +84,8 @@ document.getElementById("albumart").src = defaultAlbumArt;
 function livelyCurrentTrack(data) {
     let obj = JSON.parse(data);
     if (obj != null) {
+        visualiser.classList.remove("playing");
+        visualiser.classList.add("not-playing");
         document.querySelector("h2").innerText = obj.AlbumArtist;
         document.querySelector("h2").innerText = obj.Artist;
         document.querySelector("h1").innerText = obj.Title;
@@ -93,6 +95,8 @@ function livelyCurrentTrack(data) {
             document.getElementById("albumart").src = defaultAlbumArt;
         }
     } else {
+        visualiser.classList.remove("playing");
+        visualiser.classList.add("not-playing");
         document.querySelector("h2").innerText = "";
         document.querySelector("h1").innerText = "Waiting for media...";
         document.getElementById("albumart").src = defaultAlbumArt;
