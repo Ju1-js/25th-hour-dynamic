@@ -17,7 +17,8 @@ div.visualiser {
     justify-content: center;
 }
 
-.visualiser.hide {
+.visualiser.hide,
+.visualiser.show-when-not-playing.not-playing {
     display: none !important;
 }
 
