@@ -1,8 +1,9 @@
 const player = $("#player")[0];
 const controls = $("#controls")[0];
-const Closecontainer = $("#closecontainer")[0];
+const closeContainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
 const spriteWrap = $(".spriteWrap")[0];
+const visualiser = $(".visualiser")[0];
 var offset = 0;
 var volume = 0.25;
 // const debug = $("#debug")[0];
@@ -75,7 +76,7 @@ function livelyPropertyListener(name, val) {
       break;
     case "controls-visible":
       controls.classList.toggle("hide", !val);
-      Closecontainer.classList.toggle("hide", !val);
+      closeContainer.classList.toggle("hide", !val);
       // log(`Visible: ${val} | ${controls.classList}`);
       break;
     case "controls-location":
@@ -83,15 +84,15 @@ function livelyPropertyListener(name, val) {
       switch (val) {
         case 0:
           controls.classList.add("left");
-          Closecontainer.classList.add("L");
+          closeContainer.classList.add("L");
           controls.classList.remove("right");
-          Closecontainer.classList.remove("R");
+          closeContainer.classList.remove("R");
           break;
         case 1:
           controls.classList.add("right");
-          Closecontainer.classList.add("R");
+          closeContainer.classList.add("R");
           controls.classList.remove("left");
-          Closecontainer.classList.remove("L");
+          closeContainer.classList.remove("L");
           break;
 
         default:
@@ -126,7 +127,9 @@ function livelyPropertyListener(name, val) {
       dotScale = val;
       calcDotSize();
       break;
-
+    case "visualiser-toggle":
+      visualiser.classList.toggle("hide", !val);
+      break;
     default:
       console.error(`Unknown customization option: ${name}`);
       break;

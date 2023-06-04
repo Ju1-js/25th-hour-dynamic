@@ -17,6 +17,10 @@ div.visualiser {
     justify-content: center;
 }
 
+.visualiser.hide {
+    display: none !important;
+}
+
 .visualiser .blur {
     position: fixed;
     width: 100%;
