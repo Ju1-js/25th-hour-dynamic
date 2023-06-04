@@ -102,6 +102,30 @@ function livelyPropertyListener(name, val) {
     case "pixel-noise":
       pixelNoise.classList.toggle("hide", !val);
       break;
+    case "sortingMode":
+      switch (val) {
+        case 0:
+          sortSoundArray = concentratedSort;
+          numDots = 128;
+          break;
+        case 1:
+          sortSoundArray = centeredSort;
+          numDots = 256;
+          break;
+        default:
+          sortSoundArray = null;
+          numDots = 256;
+          break;
+      }
+      calcDotSize();
+      break;
+    case "verticalScale":
+      verticalScale = val;
+      break;
+    case "dotScale":
+      dotScale = val;
+      calcDotSize();
+      break;
 
     default:
       console.error(`Unknown customization option: ${name}`);
