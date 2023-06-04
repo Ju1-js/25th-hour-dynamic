@@ -1,0 +1,14 @@
+{
+  "AppVersion": "0.9.5.5",
+  "Title": "Weather Demo",
+  "Thumbnail": "lively_t.jpg",
+  "Preview": "lively_p.gif",
+  "Desc": "Create an API key in openweathermap.org to get started.",
+  "Author": "-",
+  "License": "see license.txt",
+  "Contact": "https://github.com/rocksdanister/weather-fetch-wallpaper",
+  "Type": 1,
+  "FileName": "index.html",
+  "Arguments": null,
+  "IsAbsolutePath": false
+}

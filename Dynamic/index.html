@@ -13,6 +13,11 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/closebutton.css">
   <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/media-parallax.css">
+  <!-- <script src="js/vis/color-thief.umd.js"></script> -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/vis/script.js" defer></script>
 </head>
 
 <body>
@@ -2196,10 +2201,65 @@
     </span>
   </span>
 
+  <!-- Music Visualiser -->
+  <div class="visualiser">
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <div class="center">
+      <img id="albumart" alt="" />
+      <span><h1>Waiting for media... <span></span></h1>
+      <h2></h2></span>
+    </div>
+    
+    <!-- <div id="parallax">
+      <img id="backgroundImageFade" />
+      <img id="backgroundImage" />
+    </div> -->
+  </div>
+
+  <!-- Clock & Weather -->
+  <div class="info-container">
+    <div class="clock">
+      <span class="time"></span>
+      <span class="time-meridiem"></span>
+      <span class="date"></span>
+    </div>
+
+    <div class="weather">
+      <div class="weather-icon"></div>
+      <div class="weather-temp"></div>
+    </div>
+  </div>
+
+  <!-- System Information -->
+  <div class="sysinfo-container">
+    <div style="z-index: 100; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 20%;" >
+      <canvas id="cpuChart" />				
+    </div>
+  
+    <div style="z-index: 100; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 0%;">
+      <canvas id="gpuChart" />
+    </div>
+  
+    <!-- <div style="z-index: 100; position: fixed; width: 20vw; height: 20vh; left: 10%; top: 55%;">
+      <canvas id="ramChart" />
+    </div> -->
+  
+    <!-- <div style="z-index: 100; position: absolute; width: 20vw; height: 20vh; left: 70%; top: 62.5%;">
+      <canvas id="netChart" />
+    </div> -->
+  </div>
+  
+  <!-- New version of chart.js has issue with chartjs-plugin-streaming.js, using this: https://cdn.jsdelivr.net/npm/chart.js@2.8.0 -->
+  <script src="js/sysinfo/moment.min.js"></script>
+  <script src="js/sysinfo/chart.js"></script>
+  <script src="js/sysinfo/chartjs-plugin-streaming.min.js"></script>
+  <script src="js/sysinfo/script.js"></script>
+
   <!-- Debug -->
   <style>
     #debug {
             z-index: 99 !important;
+            display: none;
             position: absolute;
             top: 0;
             right: 0;
@@ -2212,11 +2272,11 @@
 
   <pre id="debug"></pre>
 
-  <script src="js/jquery/jquery.min.js"></script>
-  <script src="js/LivelyProperties.js"></script>
+  <script src="js/LivelyProperties.js" defer></script>
   <script src="js/fastForward.js"></script>
   <script src="js/sprites.js"></script>
   <script src="https://vjs.zencdn.net/7.19.2/video.min.js"></script>
+  <script src="js/clock.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/closebutton.js"></script>
   <script src="js/utils.js"></script>

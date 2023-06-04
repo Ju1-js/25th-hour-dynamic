@@ -13,6 +13,7 @@ function clearLog() {
   debug.textContent = "";
 }
 
+// function livelySystemInformation(data) {}
 // function livelyAudioListener(audioArray) {}
 
 log("Starting...");
@@ -96,7 +97,7 @@ function livelyPropertyListener(name, val) {
       break;
 
     default:
-      console.error(`Unknown customization option: ${name}`);
+      // console.error(`Unknown customization option: ${name}`);
       break;
   }
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>Simple Weather Fetch</title>
+    </head>
+<body>
+  <div id="main">
+    <div id="clock">
+      <div class="time">--:-- --</div>
+      <div class="date">
+        ----
+      </div>
+    </div>
+    <div id="WeatherWhole" >
+      <table>
+      <tr>
+        <td><table><tr><td><object type="image/svg+xml" data="weather-icons/wi-sunrise.svg"></object></td>
+        <td style="padding-bottom: 5px">
+          <span id="sunriseTime"></span>&nbsp;AM
+        </td></tr></table></td>
+        <td><table><tr><td><object type="image/svg+xml"  data="weather-icons/wi-sunset.svg"></object></td>
+        <td style="padding-bottom: 5px"><span id="sunsetTime"></span>&nbsp;PM</td></tr></table></td>
+      </tr>
+      </table>
+      <div class="weather">
+        <span  id="currentTemp">&deg;</span><img id="currentImg" src="" />
+        <br />
+        <table class="minmaxTemp">
+            <tr>
+                <td id="minTemp">&nbsp; &deg; </td><td>/</td><td id="maxTemp">  &deg;&nbsp; </td>
+            </tr>
+        </table>
+        <br />
+        <table class="forecast">
+            <tr><td id="forecastday1"></td><td><img id="forecastimg1" class="forecastImg" src="" /></td><td id="forecasttemp1">------- &deg;</td></tr>
+            <tr><td id="forecastday2"></td><td><img id="forecastimg2" class="forecastImg" src="" /></td><td id="forecasttemp2">------- &deg;</td></tr>
+            <tr><td id="forecastday3"></td><td><img id="forecastimg3" class="forecastImg" src="" /></td><td id="forecasttemp3">------- &deg;</td></tr>
+            <tr><td id="forecastday4"></td><td><img id="forecastimg4" class="forecastImg" src="" /></td><td id="forecasttemp4">------- &deg;</td></tr>
+            <tr><td id="forecastday5"></td><td><img id="forecastimg5" class="forecastImg" src="" /></td><td id="forecasttemp5">------- &deg;</td></tr>
+        </table>
+      </div>
+      <span id="updatedTime">-------</span>
+    </div>
+    <div id="error">Please enter weather api information</div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@font-face
+{
+    font-family: 'IBM Plex Mono';
+    font-weight: normal;
+    font-style: monospace;
+    src: url('font/IBMPlexMono-Regular.otf');
+}
+
+body {
+  overflow: hidden;
+  background: #0c0c0c;
+  font-family: 'IBM Plex Mono', monospace;
+  color: #dcddde;
+  font-size: 16px;
+}
+
+#main{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+}
+#clock {
+  font-size: 7rem;
+  text-align: center;
+}
+.date{
+  font-size: 2rem;
+}
+
+#WeatherWhole{
+  margin-top: 75px;
+}
+.weather{
+  display:inline-block;
+  text-align:center;
+}
+#WeatherWhole>table{
+  font-size: 20px;margin-left:auto;margin-right:auto;
+}
+.weather>span{
+  font-size:4rem;
+}
+.weather>img{
+  height:5rem;
+  margin-bottom:-1rem;
+}
+.forecast .forecastImg{
+  height:32px;
+  margin-bottom:-5px;
+}
+.minmaxTemp{
+  font-size:1.5rem;margin-left:auto;margin-right:auto;
+}
+.forecast{
+  font-size:1.5rem;
+  float:right;
+  text-align: right;
+}
+#updatedTime{
+  display: block;
+  text-align: right;
+  font-size: .7rem;
+}
+object{
+  width: 2rem;
+}
+#error{
+  font-size: 2rem;
+  color: white;
+  margin: 3rem;
+  display: none;
+}

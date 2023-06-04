@@ -44,6 +44,11 @@
     "text": "Settings panel location",
     "items": ["Left", "Right"]
   },
+  "fireflies-24-7": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Fireflies 24/7"
+  },
   "label-2": {
     "type": "label",
     "value": "-= Music Visualiser =-"
@@ -53,16 +58,36 @@
     "value": true,
     "text": "Enable music visualiser"
   },
-  "visualiser-location": {
+  "labelSpectrum": {
+    "type": "label",
+    "value": "Spectrum settings"
+  },
+  "verticalScale": {
+    "max": 50,
+    "min": 0,
+    "tick": 8,
+    "step": 0.1,
+    "text": "Amplitude",
+    "type": "slider",
+    "value": 15
+  },
+  "dotScale": {
+    "max": 5,
+    "min": 0,
+    "tick": 1,
+    "step": 0.1,
+    "text": "Dot size",
+    "type": "slider",
+    "value": 1
+  },
+  "sortingMode": {
     "type": "dropdown",
-    "value": 0,
-    "text": "Visualiser location",
+    "value": 2,
+    "text": "Spectrum mode",
     "items": [
-      "Center",
-      "Top Left",
-      "Top Right",
-      "Bottom Left",
-      "Bottom Right"
+      "Concentrated",
+      "Center-split",
+      "Keep original"
     ]
   },
   "label-3": {
@@ -76,10 +101,9 @@
   },
   "clock-location": {
     "type": "dropdown",
-    "value": 3,
+    "value": 0,
     "text": "Clock location",
     "items": [
-      "Center",
       "Top Left",
       "Top Right",
       "Bottom Left",
@@ -132,16 +156,8 @@
     "text": "Enable weather"
   },
   "weather-location": {
-    "type": "dropdown",
-    "value": 1,
-    "text": "Weather location",
-    "items": [
-      "Center",
-      "Top Left",
-      "Top Right",
-      "Bottom Left",
-      "Bottom Right"
-    ]
+    "type": "label",
+    "value": "Location: Inherited from Clock"
   },
   "apiInput": {
     "text": "API Key",

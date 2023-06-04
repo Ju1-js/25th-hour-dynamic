@@ -1,0 +1,116 @@
+/* @font-face {
+    font-family: Montserrat;
+    font-weight: normal;
+    src: url("../fonts/Montserrat-Regular.otf");
+} */
+
+:root {
+    --mainColor: #fff;
+    --shadowColor: #000;
+}
+
+div.visualiser {
+    margin: 0;
+    /* background-color: #414141; */
+    overflow: hidden;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    /* align-items: center; */
+    position: relative;
+    z-index: 100;
+}
+
+.visualiser .blur {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(8px);
+    z-index: 1000;
+}
+
+.visualiser .shadow {
+    position: fixed;
+    z-index: 1001;
+    top: 4%;
+    left: 2%;
+    min-width: 100%;
+    min-height: 100%;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.5) inset;
+}
+
+.visualiser #backgroundImage {
+    width: inherit;
+    height: inherit;
+    -o-filter: blur(15px);
+    filter: blur(15px) brightness(80%);
+    object-fit: cover;
+    transform: scale(1.06); /* scale up to hide the edge blur */
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    position: absolute;
+    left: -2.5%;
+    top: -2.5%;
+    z-index: -10;
+    /* opacity: 0; */
+}
+
+.visualiser #backgroundImageFade {
+    width: inherit;
+    height: inherit;
+    -o-filter: blur(15px);
+    filter: blur(15px) brightness(80%);
+    object-fit: cover;
+    transform: scale(1.06); /* scale up to hide the edge blur */
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    position: absolute;
+    left: -2.5%;
+    top: -2.5%;
+    z-index: -9;
+}
+.visualiser canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    }
+    .center {
+    text-align: center;
+    z-index: 1;
+    }
+    .center span {
+    height: 0;
+    display: block;
+}
+
+.visualiser #albumart {
+    border: solid 1px rgba(255, 255, 255, 0.9);
+    width: 200px;
+    height: 200px;
+    box-shadow: 3px 3px 18px var(--shadowColor);
+    border-radius: 50%;
+}
+
+.visualiser div {
+    padding: 10px;
+}
+
+.visualiser h1 {
+    font-family: monospace;
+    margin: 0;
+    color: var(--mainColor);
+    text-shadow: 1px 0px 10px var(--shadowColor);
+}
+
+.visualiser h2 {
+    font-family: monospace;
+    color: var(--mainColor);
+    text-shadow: 1px 0px 10px var(--shadowColor);
+}

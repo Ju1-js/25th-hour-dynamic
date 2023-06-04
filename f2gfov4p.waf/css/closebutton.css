@@ -1,0 +1,130 @@
+:root {
+  --size: 25;
+  --thickness: 4px;
+  --roundedness: 4px;
+  --color: #c4c4c4;
+  --transition-time: 0.2s;
+}
+
+#closecontainer {
+  position: absolute;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
+}
+
+#closecontainer.L {
+  left: 0px;
+}
+
+#closecontainer.R {
+  right: 0px;
+}
+
+.Icon {
+  z-index: 900 !important;
+  width: calc(var(--size) * 1px);
+  height: calc(var(--size) * 1px);
+  position: absolute;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.Icon:hover span {
+  opacity: 1;
+}
+.controls:hover + #closecontainer > .Icon span {
+    opacity: 1;
+}
+.Icon span {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 46%;
+  height: var(--thickness); /*Thickness*/
+  width: 100%;
+  background: var(--color); /*Icon color*/
+  border-radius: var(--roundedness); /*Rounded corners*/
+  transform: rotate(0deg);
+  transition: var(--transition-time) ease-in-out;
+}
+.Icon span:nth-child(1),
+.Icon span:nth-child(3) {
+  width: 50%;
+  transform: rotate(45deg);
+}
+.Icon span:nth-child(1) {
+  top: 30%;
+}
+.Icon span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.Icon span:nth-child(3) {
+  top: 62%;
+}
+/*---*/
+.Icon.close span {
+  opacity: 1;
+}
+.Icon.close span:nth-child(1) {
+  left: 6%;
+}
+.Icon.close span {
+  left: 0;
+}
+.Icon.close span:nth-child(3) {
+  left: 40%;
+}
+/*---*/
+.Icon.left span:nth-child(1) {
+  left: 6%;
+}
+.Icon.left span {
+  left: 0;
+}
+.Icon.left span:nth-child(3) {
+  left: 40%;
+}
+.Icon.left span:nth-child(1),
+.Icon.left span:nth-child(3) {
+    left: -2%;
+}
+.Icon.left span:nth-child(1) {
+  top: 30%;
+  transform: rotate(135deg);
+}
+.Icon.left span:nth-child(2) {
+  transform: rotate(0deg);
+}
+.Icon.left span:nth-child(3) {
+  top: 62%;
+  transform: rotate(45deg);
+}
+/*---*/
+.Icon.right span:nth-child(1) {
+  right: 6%;
+}
+.Icon.right span {
+  right: 0;
+}
+.Icon.right span:nth-child(1) {
+  right: 6%;
+  top: 30%;
+}
+.Icon.right span:nth-child(3) {
+  right: 40%;
+}
+.Icon.right span:nth-child(1),
+.Icon.right span:nth-child(3) {
+    left: 50.1%;
+}
+.Icon.right span:nth-child(1) {
+  top: 30%;
+  transform: rotate(225deg);
+}
+.Icon.right span:nth-child(2) {
+  transform: rotate(0deg);
+}
+.Icon.right span:nth-child(3) {
+  top: 62%;
+  transform: rotate(-45deg);
+}

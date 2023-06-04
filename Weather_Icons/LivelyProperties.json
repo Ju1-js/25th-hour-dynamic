@@ -1,0 +1,26 @@
+{
+  "apiInput": {
+    "text": "API Key",
+    "type": "textbox",
+    "value": "openweathermap.org key"
+  },
+   "cityInput": {
+    "text": "Location",
+    "type": "textbox",
+    "value": "city, country"
+  },
+   "unit": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "Unit",
+    "items": [
+      "Metric",
+      "Imperial",
+    ]
+  },
+  "btnRefresh" : {
+	"text" : "Click to Update Weather",
+	"type" : "button",
+	"value" : "Refresh"
+	}
+}
