@@ -7,7 +7,6 @@
   "offset": {
     "max": 24,
     "min": -24,
-    "tick": 2,
     "text": "Time Offset - Half-hour increments",
     "type": "slider",
     "value": 0
@@ -22,6 +21,61 @@
     "value": false,
     "text": "Show fireflies 24/7"
   },
+  "label-visualizer": {
+    "type": "label",
+    "value": "Music Visualizer settings"
+  },
+  "visualizer-toggle": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Enable music visualizer"
+  },
+  "show-when-not-playing": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Show visualizer when not playing"
+  },
+  "label-spectrum": {
+    "type": "label",
+    "value": "Spectrum settings"
+  },
+  "vertical-scale": {
+    "max": 50,
+    "min": 0,
+    "step": 0.1,
+    "text": "Amplitude",
+    "type": "slider",
+    "value": 10
+  },
+  "visualizer-dots": {
+    "max": 512,
+    "min": 0,
+    "step": 1,
+    "text": "Number of dots",
+    "type": "slider",
+    "value": 256
+  },
+  "dot-scale": {
+    "max": 5,
+    "min": 0,
+    "step": 0.1,
+    "text": "Dot size",
+    "type": "slider",
+    "value": 1
+  },
+  "sorting-mode": {
+    "type": "dropdown",
+    "value": 5,
+    "text": "Spectrum mode",
+    "items": [
+      "Concentrated",
+      "Separated",
+      "Center-split",
+      "Mirror",
+      "Reverse mirror",
+      "Keep original"
+    ]
+  },
   "audio-play": {
     "type": "checkbox",
     "value": false,
@@ -34,7 +88,6 @@
   "audio-volume": {
     "max": 100,
     "min": 0,
-    "tick": 25,
     "text": "Background audio volume",
     "type": "slider",
     "value": 25
