@@ -167,19 +167,25 @@ function initChart()
     gpuChart = new Chart(ctxGpu, gpuChartConfig);
 };
 
-function livelySystemInformation(data)
-{
-    var obj = JSON.parse(data);
-    cpuName = "CPU (% usage)";
-    gpuName = "GPU (% usage)";
+function livelySystemInformation(data) {
+    if (!sysinfo.classList.contains("hide")) {
+        gpuChartConfig.options.scales.xAxes[0].realtime.duration = 20000;
+        cpuChartConfig.options.scales.xAxes[0].realtime.duration = 20000;
 
-    //chart data.
-    cpuCounter = obj.CurrentCpu;
-    gpuCounter = obj.CurrentGpu3D;
-    if(!isChartInit)
-    {
-        isChartInit = true;
-        initChart();
+        var obj = JSON.parse(data);
+        cpuName = "CPU (% usage)";
+        gpuName = "GPU (% usage)";
+
+        cpuCounter = obj.CurrentCpu;
+        gpuCounter = obj.CurrentGpu3D;
+        if(!isChartInit)
+        {
+            isChartInit = true;
+            initChart();
+        }
+    } else {
+        gpuChartConfig.options.scales.xAxes[0].realtime.duration = 0;
+        cpuChartConfig.options.scales.xAxes[0].realtime.duration = 0;
     }
 }
 

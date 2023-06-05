@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/closebutton.css">
   <link rel="stylesheet" href="https://unpkg.com/video.js@7/dist/video-js.min.css">
   <link rel="stylesheet" href="css/visualizer.css">
+  <link rel="stylesheet" href="css/sysinfo.css">
 </head>
 
 <body>
@@ -2199,12 +2200,11 @@
   </div>
 
   <!-- Performance Stats -->
-  <div class="sysinfo-container">
-    <div style="z-index: 8; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 20%;" >
+  <div class="sysinfo hide right">
+    <div>
       <canvas id="cpuChart" />				
     </div>
-  
-    <div style="z-index: 8; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 0%;">
+    <div>
       <canvas id="gpuChart" />
     </div>
   </div>
