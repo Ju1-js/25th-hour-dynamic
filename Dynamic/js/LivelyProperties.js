@@ -3,9 +3,9 @@ const controls = $("#controls")[0];
 const closeContainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
 const spriteWrap = $(".spriteWrap")[0];
-const visualiser = $(".visualiser")[0];
 var offset = 0;
 var volume = 0.25;
+const visualizer = $(".visualizer")[0];
 var showWhenNotPlaying = false;
 // const debug = $("#debug")[0];
 
@@ -104,11 +104,11 @@ function livelyPropertyListener(name, val) {
     case "pixel-noise":
       pixelNoise.classList.toggle("hide", !val);
       break;
-    case "visualiser-toggle":
-      visualiser.classList.toggle("hide", !val);
+    case "visualizer-toggle":
+      visualizer.classList.toggle("hide", !val);
       break;
     case "show-when-not-playing":
-      visualiser.classList.toggle("show-when-not-playing", !val);
+      visualizer.classList.toggle("show-when-not-playing", !val);
       break;
     case "sorting-mode":
       switch (val) {
