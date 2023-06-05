@@ -7,7 +7,6 @@
   "offset": {
     "max": 24,
     "min": -24,
-    "tick": 2,
     "text": "Time Offset - Half-hour increments",
     "type": "slider",
     "value": 0
@@ -22,19 +21,19 @@
     "value": false,
     "text": "Show fireflies 24/7"
   },
-  "label-visualiser": {
+  "label-visualizer": {
     "type": "label",
-    "value": "Music Visualiser settings"
+    "value": "Music Visualizer settings"
   },
-  "visualiser-toggle": {
+  "visualizer-toggle": {
     "type": "checkbox",
     "value": false,
-    "text": "Enable music visualiser"
+    "text": "Enable music visualizer"
   },
   "show-when-not-playing": {
     "type": "checkbox",
     "value": false,
-    "text": "Show visualiser when not playing"
+    "text": "Show visualizer when not playing"
   },
   "label-spectrum": {
     "type": "label",
@@ -43,16 +42,22 @@
   "vertical-scale": {
     "max": 50,
     "min": 0,
-    "tick": 8,
     "step": 0.1,
     "text": "Amplitude",
     "type": "slider",
     "value": 10
   },
+  "visualizer-dots": {
+    "max": 512,
+    "min": 0,
+    "step": 1,
+    "text": "Number of dots",
+    "type": "slider",
+    "value": 256
+  },
   "dot-scale": {
     "max": 5,
     "min": 0,
-    "tick": 1,
     "step": 0.1,
     "text": "Dot size",
     "type": "slider",
@@ -60,11 +65,14 @@
   },
   "sorting-mode": {
     "type": "dropdown",
-    "value": 2,
+    "value": 5,
     "text": "Spectrum mode",
     "items": [
       "Concentrated",
+      "Separated",
       "Center-split",
+      "Mirror",
+      "Reverse mirror",
       "Keep original"
     ]
   },
@@ -80,7 +88,6 @@
   "audio-volume": {
     "max": 100,
     "min": 0,
-    "tick": 25,
     "text": "Background audio volume",
     "type": "slider",
     "value": 25
