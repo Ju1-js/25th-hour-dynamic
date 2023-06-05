@@ -12,6 +12,7 @@ html {
   font-family: "Open Sans", sans-serif;
   background: #0d133a;
   height: 100%;
+  width: 100%;
   font-size: 100%;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -21,6 +22,7 @@ html {
 }
 body {
   height: 100%;
+  width: 100%;
   overflow: hidden;
   margin: 0;
   font-size: 1em;
