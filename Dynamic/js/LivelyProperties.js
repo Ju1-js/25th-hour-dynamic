@@ -104,22 +104,32 @@ function livelyPropertyListener(name, val) {
     case "show-when-not-playing":
       visualizer.classList.toggle("show-when-not-playing", !val);
       break;
+    case "visualizer-dots": {
+      numDots = val;
+      calcDotSize();
+      break;
+    }
     case "sorting-mode":
       switch (val) {
         case 0:
           sortSoundArray = concentratedSort;
-          numDots = 128;
           break;
         case 1:
+          sortSoundArray = separatedSort;
+          break;
+        case 2:
           sortSoundArray = centeredSort;
-          numDots = 256;
+          break;
+        case 3:
+          sortSoundArray = mirror;
+          break;
+        case 4:
+          sortSoundArray = reverseMirror;
           break;
         default:
           sortSoundArray = null;
-          numDots = 256;
           break;
       }
-      calcDotSize();
       break;
     case "vertical-scale":
       verticalScale = val;
