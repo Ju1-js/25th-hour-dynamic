@@ -1,4 +1,8 @@
 {
+  "label-general": {
+    "type": "label",
+    "value": "------ General settings ------"
+  },
   "tree-animation-play": {
     "type": "checkbox",
     "value": true,
@@ -23,7 +27,7 @@
   },
   "label-visualizer": {
     "type": "label",
-    "value": "Music Visualizer settings"
+    "value": "------ Music Visualizer settings ------"
   },
   "visualizer-toggle": {
     "type": "checkbox",
@@ -37,7 +41,7 @@
   },
   "label-spectrum": {
     "type": "label",
-    "value": "Spectrum settings"
+    "value": "------ Spectrum settings ------"
   },
   "vertical-scale": {
     "max": 50,
@@ -76,6 +80,32 @@
       "Keep original"
     ]
   },
+  "label-sysinfo": {
+    "type": "label",
+    "value": "------ System info settings ------"
+  },
+  "sysinfo-toggle": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Enable system information"
+  },
+  "sysinfo-location": {
+    "type": "dropdown",
+    "value": 0,
+    "text": "System info location",
+    "items": ["Bottom Left", "Bottom Right"]
+  },
+  "sysinfo-duration": {
+    "max": 60,
+    "min": 10,
+    "text": "System info animation duration (seconds)",
+    "type": "slider",
+    "value": 20
+  },
+  "label-audio": {
+    "type": "label",
+    "value": "------ Audio settings ------"
+  },
   "audio-play": {
     "type": "checkbox",
     "value": false,
@@ -91,6 +121,10 @@
     "text": "Background audio volume",
     "type": "slider",
     "value": 25
+  },
+  "label-controls": {
+    "type": "label",
+    "value": "------ Panel settings ------"
   },
   "controls-visible": {
     "type": "checkbox",
