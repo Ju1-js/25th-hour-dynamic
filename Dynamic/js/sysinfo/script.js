@@ -3,6 +3,7 @@ var gpuCounter = 0;
 var cpuName = "";
 var gpuName = "";
 var isChartInit = false;
+var animationDuration = 20000;
 
 var chartColors = {
     red: 'rgb(255, 99, 132)',
@@ -52,7 +53,7 @@ var cpuChartConfig = {
             xAxes: [{
                 type: 'realtime',
                 realtime: {
-                    duration: 20000,
+                    duration: animationDuration,
                     refresh: 1000,
                     delay: 1000,
                     onRefresh: onRefresh
@@ -105,7 +106,7 @@ var gpuChartConfig = {
             xAxes: [{
                 type: 'realtime',
                 realtime: {
-                    duration: 20000,
+                    duration: animationDuration,
                     refresh: 1000,
                     delay: 1000,
                     onRefresh: onRefresh
@@ -169,8 +170,8 @@ function initChart()
 
 function livelySystemInformation(data) {
     if (!sysinfo.classList.contains("hide")) {
-        gpuChartConfig.options.scales.xAxes[0].realtime.duration = 20000;
-        cpuChartConfig.options.scales.xAxes[0].realtime.duration = 20000;
+        gpuChartConfig.options.scales.xAxes[0].realtime.duration = animationDuration;
+        cpuChartConfig.options.scales.xAxes[0].realtime.duration = animationDuration;
 
         var obj = JSON.parse(data);
         cpuName = "CPU (% usage)";

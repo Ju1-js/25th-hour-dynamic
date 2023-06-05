@@ -153,6 +153,9 @@ function livelyPropertyListener(name, val) {
           break;
       }
       break;
+    case "sysinfo-duration":
+      animationDuration = val * 1000;
+      break;
     default:
       console.error(`Unknown customization option: ${name}`);
       break;

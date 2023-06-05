@@ -95,6 +95,13 @@
     "text": "System info location",
     "items": ["Bottom Left", "Bottom Right"]
   },
+  "sysinfo-duration": {
+    "max": 60,
+    "min": 10,
+    "text": "System info animation duration (seconds)",
+    "type": "slider",
+    "value": 20
+  },
   "label-audio": {
     "type": "label",
     "value": "------ Audio settings ------"
