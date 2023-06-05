@@ -138,6 +138,8 @@ function livelyPropertyListener(name, val) {
       dotScale = val;
       calcDotSize();
       break;
+    case "y-offset":
+      document.documentElement.style.setProperty("--y-offset", val + "%");
     default:
       console.error(`Unknown customization option: ${name}`);
       break;
