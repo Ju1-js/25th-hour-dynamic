@@ -9,6 +9,6 @@
   "Contact": "https://github.com/Ju1-js/25th-hour-dynamic",
   "Type": 1,
   "FileName": "index.html",
-  "Arguments": "",
+  "Arguments": "--audio --system-nowplaying",
   "IsAbsolutePath": false
 }

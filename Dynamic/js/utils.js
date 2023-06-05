@@ -1,7 +1,5 @@
 jQuery(document).ready(function ($) {
   // Slow load in
-  $("audio")[0].volume = parseFloat(volume);
-
   setTimeout(function () {
     $("body").addClass("loaded");
   }, 2000);

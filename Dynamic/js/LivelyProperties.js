@@ -1,10 +1,10 @@
 const player = $("#player")[0];
 const controls = $("#controls")[0];
-const Closecontainer = $("#closecontainer")[0];
+const closeContainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
 const spriteWrap = $(".spriteWrap")[0];
-var offset = 0;
-var volume = 0.25;
+const visualizer = $(".visualizer")[0];
+var showWhenNotPlaying = false;
 // const debug = $("#debug")[0];
 
 /* function log(message) {
@@ -48,7 +48,6 @@ function livelyPropertyListener(name, val) {
       setCorrectTime();
       break;
     case "audio-play":
-      // log(val);
       switch (val) {
         case true:
           player.autoplay = true;
@@ -67,7 +66,6 @@ function livelyPropertyListener(name, val) {
       }
       break;
     case "audio-volume":
-      // log(val / 100);
       player.volume = val / 100;
       break;
     case "247-sprites":
@@ -75,23 +73,21 @@ function livelyPropertyListener(name, val) {
       break;
     case "controls-visible":
       controls.classList.toggle("hide", !val);
-      Closecontainer.classList.toggle("hide", !val);
-      // log(`Visible: ${val} | ${controls.classList}`);
+      closeContainer.classList.toggle("hide", !val);
       break;
     case "controls-location":
-      // log(val);
       switch (val) {
         case 0:
           controls.classList.add("left");
-          Closecontainer.classList.add("L");
+          closeContainer.classList.add("L");
           controls.classList.remove("right");
-          Closecontainer.classList.remove("R");
+          closeContainer.classList.remove("R");
           break;
         case 1:
           controls.classList.add("right");
-          Closecontainer.classList.add("R");
+          closeContainer.classList.add("R");
           controls.classList.remove("left");
-          Closecontainer.classList.remove("L");
+          closeContainer.classList.remove("L");
           break;
 
         default:
@@ -102,7 +98,46 @@ function livelyPropertyListener(name, val) {
     case "pixel-noise":
       pixelNoise.classList.toggle("hide", !val);
       break;
-
+    case "visualizer-toggle":
+      visualizer.classList.toggle("hide", !val);
+      break;
+    case "show-when-not-playing":
+      visualizer.classList.toggle("show-when-not-playing", !val);
+      break;
+    case "visualizer-dots": {
+      numDots = val;
+      calcDotSize();
+      break;
+    }
+    case "sorting-mode":
+      switch (val) {
+        case 0:
+          sortSoundArray = concentratedSort;
+          break;
+        case 1:
+          sortSoundArray = separatedSort;
+          break;
+        case 2:
+          sortSoundArray = centeredSort;
+          break;
+        case 3:
+          sortSoundArray = mirror;
+          break;
+        case 4:
+          sortSoundArray = reverseMirror;
+          break;
+        default:
+          sortSoundArray = null;
+          break;
+      }
+      break;
+    case "vertical-scale":
+      verticalScale = val;
+      break;
+    case "dot-scale":
+      dotScale = val;
+      calcDotSize();
+      break;
     default:
       console.error(`Unknown customization option: ${name}`);
       break;

@@ -1,4 +1,4 @@
-setCorrectTime();
+var offset = 0;
 
 function setCorrectTime() {
   var date = new Date();
@@ -25,3 +25,5 @@ function setCorrectTime() {
       "s;}</style>"
   );
 }
+
+setCorrectTime();
