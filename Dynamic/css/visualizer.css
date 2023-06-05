@@ -1,0 +1,79 @@
+:root {
+    --mainColor: #fff;
+    --shadowColor: #000;
+}
+
+div.visualizer {
+    color: #fff;
+    font: 13px/24px Monospace;
+    overscroll-behavior: none;
+    overflow: hidden;
+    user-select: none;
+    display: flex;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    justify-content: center;
+}
+
+.visualizer.hide,
+.visualizer.show-when-not-playing.not-playing {
+    display: none !important;
+}
+
+.visualizer .blur {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(8px);
+    z-index: 8;
+}
+
+.visualizer .shadow {
+    position: fixed;
+    z-index: 8;
+    top: 4%;
+    left: 2%;
+    min-width: 100%;
+    min-height: 100%;
+    box-shadow: 0 5px 15px var(--shadow-color) inset;
+}
+
+.visualizer canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.center {
+    text-align: center;
+    z-index: 8;
+}
+
+.center span {
+    height: 0;
+    display: block;
+}
+
+.visualizer #albumart {
+    width: 200px;
+    height: 200px;
+    box-shadow: 3px 3px 18px var(--shadowColor);
+    border-radius: 50%;
+}
+
+.visualizer div {
+    padding: 10px;
+}
+
+.visualizer h1, h2 {
+    font-family: monospace;
+    margin: 10px;
+    color: var(--mainColor);
+    text-shadow: 1px 0px 10px var(--shadowColor);
+}
