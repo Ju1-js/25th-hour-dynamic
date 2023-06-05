@@ -3,8 +3,6 @@ const controls = $("#controls")[0];
 const closeContainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
 const spriteWrap = $(".spriteWrap")[0];
-var offset = 0;
-var volume = 0.25;
 const visualizer = $(".visualizer")[0];
 var showWhenNotPlaying = false;
 // const debug = $("#debug")[0];
@@ -50,7 +48,6 @@ function livelyPropertyListener(name, val) {
       setCorrectTime();
       break;
     case "audio-play":
-      // log(val);
       switch (val) {
         case true:
           player.autoplay = true;
@@ -69,7 +66,6 @@ function livelyPropertyListener(name, val) {
       }
       break;
     case "audio-volume":
-      // log(val / 100);
       player.volume = val / 100;
       break;
     case "247-sprites":
@@ -78,10 +74,8 @@ function livelyPropertyListener(name, val) {
     case "controls-visible":
       controls.classList.toggle("hide", !val);
       closeContainer.classList.toggle("hide", !val);
-      // log(`Visible: ${val} | ${controls.classList}`);
       break;
     case "controls-location":
-      // log(val);
       switch (val) {
         case 0:
           controls.classList.add("left");
