@@ -3,7 +3,7 @@
     --shadowColor: #000;
 }
 
-div.visualiser {
+div.visualizer {
     color: #fff;
     font: 13px/24px Monospace;
     overscroll-behavior: none;
@@ -11,18 +11,18 @@ div.visualiser {
     user-select: none;
     display: flex;
     z-index: 8;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     position: relative;
     justify-content: center;
 }
 
-.visualiser.hide,
-.visualiser.show-when-not-playing.not-playing {
+.visualizer.hide,
+.visualizer.show-when-not-playing.not-playing {
     display: none !important;
 }
 
-.visualiser .blur {
+.visualizer .blur {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -32,7 +32,7 @@ div.visualiser {
     z-index: 8;
 }
 
-.visualiser .shadow {
+.visualizer .shadow {
     position: fixed;
     z-index: 8;
     top: 4%;
@@ -42,7 +42,7 @@ div.visualiser {
     box-shadow: 0 5px 15px var(--shadow-color) inset;
 }
 
-.visualiser canvas {
+.visualizer canvas {
     position: absolute;
     top: 0;
     left: 0;
@@ -60,18 +60,18 @@ div.visualiser {
     display: block;
 }
 
-.visualiser #albumart {
+.visualizer #albumart {
     width: 200px;
     height: 200px;
     box-shadow: 3px 3px 18px var(--shadowColor);
     border-radius: 50%;
 }
 
-.visualiser div {
+.visualizer div {
     padding: 10px;
 }
 
-.visualiser h1, h2 {
+.visualizer h1, h2 {
     font-family: monospace;
     margin: 10px;
     color: var(--mainColor);
