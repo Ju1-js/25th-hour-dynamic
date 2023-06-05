@@ -2198,6 +2198,17 @@
     </div>
   </div>
 
+  <!-- Performance Stats -->
+  <div class="sysinfo-container">
+    <div style="z-index: 8; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 20%;" >
+      <canvas id="cpuChart" />				
+    </div>
+  
+    <div style="z-index: 8; position: fixed; width: 18vw; height: 18vh; bottom: 0%; right: 0%;">
+      <canvas id="gpuChart" />
+    </div>
+  </div>
+
   <!-- Debug -->
   <!-- <style>
     #debug {
@@ -2223,6 +2234,11 @@
   <script src="js/audio.js"></script>
   <script src="js/closebutton.js"></script>
   <script src="js/utils.js"></script>
+  <!-- New version of chart.js has issue with chartjs-plugin-streaming.js, using this: https://cdn.jsdelivr.net/npm/chart.js@2.8.0 -->
+  <script src="js/sysinfo/moment.min.js"></script>
+  <script src="js/sysinfo/chart.js"></script>
+  <script src="js/sysinfo/chartjs-plugin-streaming.min.js"></script>
+  <script src="js/sysinfo/script.js"></script>
 </body>
 
 </html>
