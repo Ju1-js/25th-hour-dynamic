@@ -138,6 +138,8 @@ function livelyPropertyListener(name, val) {
       dotScale = val;
       calcDotSize();
       break;
+    case "y-offset":
+      document.documentElement.style.setProperty("--y-offset", val + "%");
     case "sysinfo-toggle":
       sysinfo.classList.toggle("hide", !val);
       break;

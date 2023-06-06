@@ -15,6 +15,13 @@
     "type": "slider",
     "value": 0
   },
+  "y-offset": {
+    "max": 20,
+    "min": 0,
+    "text": "Y Offset",
+    "type": "slider",
+    "value": 0
+  },
   "pixel-noise": {
     "type": "checkbox",
     "value": false,
