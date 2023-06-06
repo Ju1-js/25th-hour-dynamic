@@ -378,7 +378,7 @@ a {
   background: white;
   width: 10%;
   height: 10%;
-  top: calc(45% - var(--y-offset));
+  top: calc(45%);
   border-radius: 100%;
   margin: auto;
   left: 0;
