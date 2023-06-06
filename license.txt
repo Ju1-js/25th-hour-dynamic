@@ -1,26 +1,34 @@
-The project is licensed under MIT
-Copyright (c) 2023 Rocksdanister
+This file contains the licenses for all the third party software used in this project.
+
+Note: Some of these licenses may not be up to date. Please check the original source for the most up to date license.
 
 ************************************************************************************************************************************
 
-AudioDot visualizer
-
-MIT License Copyright (c) 2022 John Bernal
-
-https://github.com/DigitalNaut/AudioDotVisualizer
+--------- 25th Hour ------------
+See the 25th Hour folder for the license.
 
 ************************************************************************************************************************************
 
-Color Thief licensed under MIT license
+--------- Audio Visualizer ------------
 
-https://github.com/lokesh/color-thief
+Media Parallax Sample is licensed under MIT License Copyright (c) 2023 Rocksdanister https://github.com/rocksdanister/audio-visualizer-wallpaper
 
-************************************************************************************************************************************
+AudioDot visualizer is licensed under MIT License Copyright (c) 2022 John Bernal https://github.com/DigitalNaut/AudioDotVisualizer
 
 jQuery licensed under MIT license https://github.com/jquery/jquery/blob/main/LICENSE.txt
 
+Vinyl Record by Chriss Gannon licensed under Lottie Simple License (FL 9.13.21): https://lottiefiles.com/21200-vinyl-record
+
 ************************************************************************************************************************************
 
-Photo by Codioful (formerly Gradienta): https://www.pexels.com/photo/a-red-and-blue-color-gradient-7135037/
+--------- System Statistics ------------
 
-Vinyl Record by Chriss Gannon licensed under Lottie Simple License (FL 9.13.21): https://lottiefiles.com/21200-vinyl-record
+System Stats Wallpaper is licensed under MIT License Copyright (c) 2020 Rocksdanister https://github.com/rocksdanister/system-stats-wallpaper
+
+Moment.js is licensed under MIT License Copyright (c) JS Foundation and other contributors https://github.com/moment/moment
+
+Chart.js is licensed under MIT License Copyright (c) 2014-2022 Chart.js Contributors https://github.com/chartjs/Chart.js
+
+chartjs-plugin-streaming is licensed under MIT License Copyright (c) 2017-2021 Akihiko Kusanagi https://nagix.github.io/chartjs-plugin-streaming
+
+************************************************************************************************************************************

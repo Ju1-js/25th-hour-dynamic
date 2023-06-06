@@ -4,7 +4,7 @@ const closeContainer = $("#closecontainer")[0];
 const pixelNoise = $(".noise")[0];
 const spriteWrap = $(".spriteWrap")[0];
 const visualizer = $(".visualizer")[0];
-var showWhenNotPlaying = false;
+const sysinfo = $(".sysinfo")[0];
 // const debug = $("#debug")[0];
 
 /* function log(message) {
@@ -140,6 +140,24 @@ function livelyPropertyListener(name, val) {
       break;
     case "y-offset":
       document.documentElement.style.setProperty("--y-offset", val + "%");
+    case "sysinfo-toggle":
+      sysinfo.classList.toggle("hide", !val);
+      break;
+    case "sysinfo-location":
+      switch (val) {
+        case 0:
+          sysinfo.classList.add("left");
+          sysinfo.classList.remove("right");
+          break;
+        case 1:
+          sysinfo.classList.add("right");
+          sysinfo.classList.remove("left");
+          break;
+      }
+      break;
+    case "sysinfo-duration":
+      animationDuration = val * 1000;
+      break;
     default:
       console.error(`Unknown customization option: ${name}`);
       break;
