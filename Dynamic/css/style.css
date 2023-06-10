@@ -870,50 +870,6 @@ a {
   }
 }
 
-.video-js.vjs-audio {
-  height: 3em;
-  width: 100%;
-}
-.video-js.vjs-audio .vjs-big-play-button {
-  display: none;
-}
-.video-js.vjs-audio .vjs-control-bar {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-.video-js.vjs-audio .vjs-loading-spinner {
-  display: none;
-}
-.video-js.vjs-audio.vjs-waiting .vjs-progress-holder:not(.vjs-seeking) {
-  height: 0.5em;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    #73859f,
-    #73859f 11px,
-    #eee 10px,
-    #eee 20px
-  );
-  border-radius: 3px;
-  background-size: 28px 28px;
-  transition: height 0.5s;
-  animation: vjs-slider-indeterminate 0.5s linear infinite;
-}
-.video-js.vjs-audio.vjs-waiting
-  .vjs-progress-holder:not(.vjs-seeking)
-  .vjs-play-progress {
-  display: none;
-}
-@keyframes vjs-slider-indeterminate {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 28px 0;
-  }
-}
-
 /* Landscape
   ---------------------------------------------- */
 #landscape {

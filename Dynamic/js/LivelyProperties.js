@@ -47,27 +47,6 @@ function livelyPropertyListener(name, val) {
       offset = val / 2;
       setCorrectTime();
       break;
-    case "audio-play":
-      switch (val) {
-        case true:
-          player.autoplay = true;
-          player.play();
-          videojs("player").muted(false);
-          break;
-        case false:
-          player.autoplay = false;
-          player.pause();
-          videojs("player").muted(true);
-          break;
-
-        default:
-          console.error(`Unknown audio playback option: ${val}`);
-          break;
-      }
-      break;
-    case "audio-volume":
-      player.volume = val / 100;
-      break;
     case "247-sprites":
       spriteWrap.classList.toggle("spriteWrap-animation", !val);
       break;
