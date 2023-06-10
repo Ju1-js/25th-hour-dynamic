@@ -19,7 +19,7 @@ div.visualizer {
 
 .visualizer.hide,
 .visualizer.show-when-not-playing.not-playing {
-    display: none !important;
+    display: none;
 }
 
 .visualizer .blur {
@@ -57,7 +57,6 @@ div.visualizer {
 
 .center span {
     height: 0;
-    display: block;
 }
 
 .visualizer #albumart {
