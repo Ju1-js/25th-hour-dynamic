@@ -1,8 +1,13 @@
+:root {
+  --sysinfo-y-offset: 0%;
+}
+
 .sysinfo {
-    position: fixed;
-    bottom: 0px;
+    position: absolute;
+    bottom: calc(0px + var(--sysinfo-y-offset));
     display: flex;
     z-index: 8;
+    padding-right: 7px;
 }
 .sysinfo.hide {
     display: none;

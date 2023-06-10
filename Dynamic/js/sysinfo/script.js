@@ -1,6 +1,8 @@
 var cpuCounter = 0;
+var ramCounter = 0;
 var gpuCounter = 0;
 var cpuName = "";
+var ramName = "";
 var gpuName = "";
 var isChartInit = false;
 var animationDuration = 20000;
@@ -83,8 +85,64 @@ var cpuChartConfig = {
     },
   },
 };
+
+var ramChartConfig = {
+  type: "line",
+  data: {
+    datasets: [
+      {
+        label: "Dataset 1 (linear interpolation)",
+        backgroundColor: color(chartColors.white).alpha(1).rgbString(),
+        borderColor: chartColors.white,
+        fill: false,
+        lineTension: 0,
+        borderDash: [0, 0],
+        pointRadius: 0,
+        data: [],
+      },
+    ],
+  },
+  options: {
+    maintainAspectRatio: false,
+    legend: {
+      display: false,
+    },
+    title: {
+      display: true,
+      text: "Memory",
+      fontColor: "#fff",
+    },
+    scales: {
+      xAxes: [
+        {
+          type: "realtime",
+          realtime: {
+            duration: animationDuration,
+            refresh: 1000,
+            delay: 1000,
+            onRefresh: onRefresh,
+          },
+          ticks: {
+            display: false,
+          },
         },
-    }
+      ],
+      yAxes: [
+        {
+          scaleLabel: {
+            display: false,
+            labelString: "%",
+          },
+          gridLines: { color: "#676062" },
+          ticks: {
+            beginAtZero: true,
+            max: 100,
+            fontColor: "#fff",
+          },
+        },
+      ],
+    },
+  },
 };
 
 var gpuChartConfig = {
@@ -152,6 +210,9 @@ function onRefresh(chart) {
     case cpuChart:
       data[0] = cpuCounter;
       break;
+    case ramChart:
+      data[0] = ramCounter;
+      break;
     case gpuChart:
       data[0] = gpuCounter;
       break;
@@ -170,11 +231,14 @@ function onRefresh(chart) {
 var cpuChart, ramChart, gpuChart;
 function initChart() {
   cpuChartConfig.options.title.text = cpuName;
+  ramChartConfig.options.title.text = ramName;
   gpuChartConfig.options.title.text = gpuName;
 
   var ctxCpu = document.getElementById("cpuChart").getContext("2d");
   cpuChart = new Chart(ctxCpu, cpuChartConfig);
 
+  var ctxRam = document.getElementById("ramChart").getContext("2d");
+  ramChart = new Chart(ctxRam, ramChartConfig);
 
   var ctxGpu = document.getElementById("gpuChart").getContext("2d");
   gpuChart = new Chart(ctxGpu, gpuChartConfig);
@@ -189,6 +253,12 @@ function livelySystemInformation(data) {
         animationDuration;
       cpuCounter = obj.CurrentCpu;
     }
+    if (!sysinfo.children[1].classList.contains("hide")) {
+      ramName = "RAM (% usage)";
+      ramChartConfig.options.scales.xAxes[0].realtime.duration =
+        animationDuration;
+      ramCounter = (1 - obj.CurrentRamAvail / obj.TotalRam) * 100;
+    }
     if (!sysinfo.children[2].classList.contains("hide")) {
       gpuName = "GPU (% usage)";
       gpuChartConfig.options.scales.xAxes[0].realtime.duration =
@@ -202,6 +272,7 @@ function livelySystemInformation(data) {
     }
   } else {
     cpuChartConfig.options.scales.xAxes[0].realtime.duration = 0;
+    ramChartConfig.options.scales.xAxes[0].realtime.duration = 0;
     gpuChartConfig.options.scales.xAxes[0].realtime.duration = 0;
   }
 }

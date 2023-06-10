@@ -140,8 +140,24 @@ function livelyPropertyListener(name, val) {
       break;
     case "y-offset":
       document.documentElement.style.setProperty("--y-offset", val + "%");
+      break;
+    case "sys-y-offset":
+      document.documentElement.style.setProperty(
+        "--sysinfo-y-offset",
+        val + "%"
+      );
+      break;
     case "sysinfo-toggle":
       sysinfo.classList.toggle("hide", !val);
+      break;
+    case "sysinfo-cpu-toggle":
+      sysinfo.children[0].classList.toggle("hide", !val);
+      break;
+    case "sysinfo-ram-toggle":
+      sysinfo.children[1].classList.toggle("hide", !val);
+      break;
+    case "sysinfo-gpu-toggle":
+      sysinfo.children[2].classList.toggle("hide", !val);
       break;
     case "sysinfo-location":
       switch (val) {

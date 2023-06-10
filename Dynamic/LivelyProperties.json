@@ -97,6 +97,14 @@
     "value": false,
     "text": "Enable system information"
   },
+  "sys-y-offset": {
+    "max": 30,
+    "min": 0,
+    "step": 0.01,
+    "text": "System Info Y Offset",
+    "type": "slider",
+    "value": 0
+  },
   "sysinfo-location": {
     "type": "dropdown",
     "value": 0,
@@ -109,6 +117,21 @@
     "text": "System info animation duration (seconds)",
     "type": "slider",
     "value": 20
+  },
+  "sysinfo-cpu-toggle": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Show cpu graph"
+  },
+  "sysinfo-ram-toggle": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Show ram graph"
+  },
+  "sysinfo-gpu-toggle": {
+    "type": "checkbox",
+    "value": true,
+    "text": "Show gpu graph"
   },
   "label-audio": {
     "type": "label",
