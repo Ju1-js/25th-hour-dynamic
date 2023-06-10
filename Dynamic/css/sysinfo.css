@@ -1,0 +1,24 @@
+:root {
+  --sysinfo-y-offset: 0%;
+}
+
+.sysinfo {
+    position: absolute;
+    bottom: calc(0px + var(--sysinfo-y-offset));
+    display: flex;
+    z-index: 8;
+    padding-right: 7px;
+}
+.sysinfo.hide {
+    display: none;
+}
+.sysinfo > div {
+    width: 18vw;
+    height: 18vh;
+}
+.sysinfo.left {
+    left: 0px;
+}
+.sysinfo.right {
+    right: 0px;
+}

@@ -4,6 +4,7 @@
    --------------------------------------------- */
 :root {
   --cycle-duration: 86400s;
+  --y-offset: 0%;
 }
 
 /* Global Styles
@@ -69,7 +70,7 @@ a {
   height: 60%;
   margin-bottom: -6px;
   position: absolute;
-  top: 0px;
+  top: calc(0px - var(--y-offset));
   z-index: 2;
 }
 #sky-rect {
@@ -80,7 +81,7 @@ a {
 #sunMask {
   height: 40%;
   position: absolute;
-  top: 60%;
+  top: calc(60% - var(--y-offset));
   z-index: 4;
 }
 #reflection-rect {
@@ -90,7 +91,6 @@ a {
   background: #0d133a;
   height: 40%;
   position: absolute;
-  top: 60%;
   width: 100%;
 }
 
@@ -98,7 +98,7 @@ a {
   ---------------------------------------------- */
 #stag {
   position: absolute;
-  bottom: 15.3%;
+  bottom: calc(15.3% + var(--y-offset));
   width: 6.3%;
   left: 38%;
   z-index: 5;
@@ -323,7 +323,7 @@ a {
   height: 4%;
   background: transparent;
   margin: auto;
-  top: 57%;
+  top: calc(57% - var(--y-offset));
   left: 0;
   right: 0;
 }
@@ -378,7 +378,7 @@ a {
   background: white;
   width: 10%;
   height: 10%;
-  top: 45%;
+  top: calc(45%);
   border-radius: 100%;
   margin: auto;
   left: 0;
@@ -398,7 +398,7 @@ a {
 .clouds svg {
   width: 60%;
   position: absolute;
-  top: 51%;
+  top: calc(51% - var(--y-offset));
   filter: blur(2px);
   opacity: 0.4;
   left: -60%;
@@ -502,7 +502,7 @@ a {
   width: 2.3%;
   position: absolute;
   right: 49.2%;
-  top: 72.5%;
+  top: calc(72.5% - var(--y-offset));
   animation: twinkles var(--cycle-duration) linear infinite;
 }
 @keyframes twinkles {
@@ -655,7 +655,7 @@ a {
   right: 0;
   animation: stars 172800s linear infinite;
   transform: rotate(0deg);
-  top: -35%;
+  top: var(-35% - var(--y-offset));
 }
 
 @keyframes stars {
@@ -674,7 +674,7 @@ a {
   animation: starsReflect 172800s linear infinite;
   transform: rotate(0deg);
   top: initial;
-  bottom: -102%;
+  bottom: calc(-102% + var(--y-offset));
 }
 @keyframes starsReflect {
   100% {
@@ -919,7 +919,7 @@ a {
 #landscape {
   width: 100.5%;
   position: absolute;
-  bottom: 11%;
+  bottom: calc(11% + var(--y-offset));
   z-index: 5;
 }
 
@@ -927,7 +927,7 @@ a {
   animation-name: bottomFill;
   height: 100%;
   position: absolute;
-  top: 88%;
+  top: calc(88% - var(--y-offset));
   width: 100%;
   z-index: 5;
 }
@@ -2077,40 +2077,40 @@ a {
     height: 42%;
   }
   #landscape {
-    bottom: -3%;
+    bottom: calc(-3% + var(--y-offset));
   }
   #bottom {
-    top: 101%;
+    top: calc(101% - var(--y-offset));
   }
   #stag {
-    bottom: 3%;
+    bottom: calc(3% + var(--y-offset));
   }
   .sun {
-    top: -570%;
+    top: calc(-570% - var(--y-offset));
   }
   .twinkles {
-    top: 77%;
+    top: calc(77% - var(--y-offset));
   }
 }
 /* 5/2 and 14/5 */
 @media screen and (min-aspect-ratio: 5/2) and (max-aspect-ratio: 14/5) {
   .twinkles {
-    top: 75%;
+    top: calc(75% - var(--y-offset));
   }
   #reflection,
   #sunMask {
   }
   #landscape {
-    bottom: 1%;
+    bottom: calc(1% + var(--y-offset));
   }
   #bottom {
-    top: 98%;
+    top: calc(98% - var(--y-offset));
   }
   #stag {
-    bottom: 7%;
+    bottom: calc(7% + var(--y-offset));
   }
   .sun {
-    top: -532%;
+    top: calc(-532% - var(--y-offset));
   }
 }
 /* 9/4 and 5/2 */
@@ -2123,16 +2123,16 @@ a {
     height: 40%;
   }
   #landscape {
-    bottom: 5%;
+    bottom: calc(5% + var(--y-offset));
   }
   #bottom {
-    top: 94%;
+    top: calc(94% - var(--y-offset));
   }
   #stag {
-    bottom: 10%;
+    bottom: calc(10% + var(--y-offset));
   }
   .sun {
-    top: -452%;
+    top: calc(-452% - var(--y-offset));
   }
 }
 /* 11/5 and 9/4 */
@@ -2143,16 +2143,16 @@ a {
   #sunMask {
   }
   #landscape {
-    bottom: 6%;
+    bottom: calc(6% + var(--y-offset));
   }
   #bottom {
-    top: 93%;
+    top: calc(93% - var(--y-offset));
   }
   #stag {
-    bottom: 11%;
+    bottom: calc(11% + var(--y-offset));
   }
   .sun {
-    top: -410%;
+    top: calc(-410% - var(--y-offset));
   }
 }
 /* 13/6 and 11/5 */
@@ -2164,13 +2164,13 @@ a {
     height: 37%;
   }
   #landscape {
-    bottom: 6%;
+    bottom: calc(6% + var(--y-offset));
   }
   #bottom {
-    top: 93%;
+    top: calc(93% - var(--y-offset));
   }
   #stag {
-    bottom: 11%;
+    bottom: calc(11% + var(--y-offset));
   }
   .sun {
   }
@@ -2185,13 +2185,13 @@ a {
     height: 31%;
   }
   #landscape {
-    bottom: 7%;
+    bottom: calc(7% + var(--y-offset));
   }
   #bottom {
-    top: 92%;
+    top: calc(92% - var(--y-offset));
   }
   #stag {
-    bottom: 12%;
+    bottom: calc(12% + var(--y-offset));
   }
   .sun {
   }
@@ -2206,16 +2206,16 @@ a {
     height: 31%;
   }
   #landscape {
-    bottom: 8%;
+    bottom: calc(8% + var(--y-offset));
   }
   #bottom {
-    top: 91%;
+    top: calc(91% - var(--y-offset));
   }
   #stag {
-    bottom: 12%;
+    bottom: calc(12% + var(--y-offset));
   }
   .sun {
-    top: -370%;
+    top: calc(-370% - var(--y-offset));
   }
 }
 
@@ -2231,7 +2231,7 @@ a {
   #bottom {
   }
   #stag {
-    bottom: 15%;
+    bottom: calc(15% + var(--y-offset));
   }
   .sun {
   }
@@ -2240,117 +2240,117 @@ a {
 /* 7/4 and 15/8 */
 @media screen and (min-aspect-ratio: 7/4) and (max-aspect-ratio: 15/8) {
   .twinkles {
-    top: 71%;
+    top: calc(71% - var(--y-offset));
   }
   #reflection,
   #sunMask {
     height: 28%;
   }
   #landscape {
-    bottom: 13%;
+    bottom: calc(13% + var(--y-offset));
   }
   #bottom {
-    top: 86%;
+    top: calc(86% - var(--y-offset));
   }
   #stag {
-    bottom: 17%;
+    bottom: calc(17% + var(--y-offset));
   }
   .sun {
-    top: -300%;
+    top: calc(-300% - var(--y-offset));
   }
 }
 /* 11/7 and 7/4 */
 @media screen and (min-aspect-ratio: 11/7) and (max-aspect-ratio: 7/4) {
   .twinkles {
-    top: 69%;
+    top: calc(69% - var(--y-offset));
   }
   #reflection,
   #sunMask {
     height: 24%;
   }
   #landscape {
-    bottom: 16%;
+    bottom: calc(16% + var(--y-offset));
   }
   #bottom {
-    top: 83%;
+    top: calc(83% - var(--y-offset));
   }
   #stag {
-    bottom: 20%;
+    bottom: calc(20% + var(--y-offset));
   }
   .sun {
-    top: -270%;
+    top: calc(-270% - var(--y-offset));
   }
 }
 /* 13/9 and 11/7 */
 @media screen and (min-aspect-ratio: 13/9) and (max-aspect-ratio: 11/7) {
   .twinkles {
-    top: 68%;
+    top: calc(68% - var(--y-offset));
   }
   #reflection,
   #sunMask {
     height: 22%;
   }
   #landscape {
-    bottom: 18%;
+    bottom: calc(18% + var(--y-offset));
   }
   #bottom {
-    top: 81%;
+    top: calc(81% - var(--y-offset));
   }
   #stag {
-    bottom: 21.6%;
+    bottom: calc(21.6% + var(--y-offset));
   }
   .sun {
-    top: -240%;
+    top: calc(-240% - var(--y-offset));
   }
 }
 /* 4/3 and 13/9 */
 @media screen and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 13/9) {
   .twinkles {
-    top: 66%;
+    top: calc(66% - var(--y-offset));
   }
   #reflection,
   #sunMask {
     height: 19%;
   }
   #landscape {
-    bottom: 22%;
+    bottom: calc(22% + var(--y-offset));
   }
   #bottom {
-    top: 77%;
+    top: calc(77% - var(--y-offset));
   }
   #stag {
-    bottom: 25%;
+    bottom: calc(25% + var(--y-offset));
   }
   .sun {
-    top: -230%;
+    top: calc(-230% - var(--y-offset));
   }
 }
 /* 8/7 and 4/3 */
 @media screen and (min-aspect-ratio: 8/7) and (max-aspect-ratio: 4/3) {
   .twinkles {
-    top: 65%;
+    top: calc(65% - var(--y-offset));
   }
   #reflection,
   #sunMask {
     height: 18%;
   }
   #landscape {
-    bottom: 23%;
+    bottom: calc(23% + var(--y-offset));
   }
   #bottom {
-    top: 76%;
+    top: calc(76% - var(--y-offset));
   }
   #stag {
-    bottom: 25.3%;
+    bottom: calc(25.3% + var(--y-offset));
   }
   .sun {
-    top: -180%;
+    top: calc(-180% - var(--y-offset));
   }
 }
 /* 14/15 and 8/7 */
 @media screen and (min-aspect-ratio: 14/15) and (max-aspect-ratio: 8/7) {
   .twinkles {
-    top: 63%;
+    top: calc(63% - var(--y-offset));
     width: 3%;
   }
   #reflection,
@@ -2358,22 +2358,22 @@ a {
     height: 17%;
   }
   #landscape {
-    bottom: 26%;
+    bottom: calc(26% + var(--y-offset));
   }
   #bottom {
-    top: 73.8%;
+    top: calc(73.8% - var(--y-offset));
   }
   #stag {
-    bottom: 28.3%;
+    bottom: calc(28.3% + var(--y-offset));
   }
   .sun {
-    top: -140%;
+    top: calc(-140% - var(--y-offset));
   }
 }
 /* 5/6 and 14/15 */
 @media screen and (min-aspect-ratio: 5/6) and (max-aspect-ratio: 14/15) {
   .twinkles {
-    top: 63%;
+    top: calc(63% - var(--y-offset));
     width: 3%;
   }
   #reflection,
@@ -2381,22 +2381,22 @@ a {
     height: 13%;
   }
   #landscape {
-    bottom: 28%;
+    bottom: calc(28% + var(--y-offset));
   }
   #bottom {
-    top: 71.5%;
+    top: calc(71.5% - var(--y-offset));
   }
   #stag {
-    bottom: 30%;
+    bottom: calc(30% + var(--y-offset));
   }
   .sun {
-    top: -110%;
+    top: calc(-110% - var(--y-offset));
   }
 }
 /* 7/10 and 5/6 */
 @media screen and (min-aspect-ratio: 7/10) and (max-aspect-ratio: 5/6) {
   .twinkles {
-    top: 62%;
+    top: calc(62% - var(--y-offset));
     width: 3%;
   }
   #reflection,
@@ -2404,22 +2404,22 @@ a {
     height: 11%;
   }
   #landscape {
-    bottom: 30%;
+    bottom: calc(30% + var(--y-offset));
   }
   #bottom {
-    top: 69.6%;
+    top: calc(69.6% - var(--y-offset));
   }
   #stag {
-    bottom: 31.8%;
+    bottom: calc(31.8% + var(--y-offset));
   }
   .sun {
-    top: -70%;
+    top: calc(-70% - var(--y-offset));
   }
 }
 /* 5/9 and 7/10 */
 @media screen and (min-aspect-ratio: 5/9) and (max-aspect-ratio: 7/10) {
   .twinkles {
-    top: 62%;
+    top: calc(62% - var(--y-offset));
     width: 3%;
   }
   #reflection,
@@ -2427,16 +2427,16 @@ a {
     height: 8%;
   }
   #landscape {
-    bottom: 32%;
+    bottom: calc(32% + var(--y-offset));
   }
   #bottom {
-    top: 67.5%;
+    top: calc(67.5% - var(--y-offset));
   }
   #stag {
-    bottom: 33.5%;
+    bottom: calc(33.5% + var(--y-offset));
   }
   .sun {
-    top: -55%;
+    top: calc(-55% - var(--y-offset));
   }
 }
 
