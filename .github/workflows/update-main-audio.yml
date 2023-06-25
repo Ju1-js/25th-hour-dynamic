@@ -1,0 +1,23 @@
+name: Update main-audio branch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-branch:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Create and switch to main-audio branch
+      run: git checkout -b main-audio
+
+    - name: Pull changes from main branch
+      run: git pull origin main
+
+    - name: Push changes to main-audio branch
+      run: git push origin main-audio
