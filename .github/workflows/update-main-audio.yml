@@ -13,6 +13,12 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Update Remote
+      run: git remote update
+    
+    - name: Fetch Changes
+      run: git fetch
+
     - name: Create and switch to main-audio branch
       run: git checkout main-audio
 
