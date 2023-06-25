@@ -1,4 +1,5 @@
 name: Rebase main-audio
+
 on:
   push:
     branches:
@@ -11,16 +12,19 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
-      - name: Configure git user
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
 
-      - name: Update main-audio branch
+      - name: Configure Git
         run: |
-          git fetch --all
+          git config user.name "Your Name"
+          git config user.email "your-email@example.com"
+
+      - name: Fetch main-audio branch
+        run: git fetch origin main-audio
+
+      - name: Rebase main-audio onto main
+        run: git rebase origin/main main-audio
+
+      - name: Push rebased branch
+        run: |
           git checkout main-audio
-          git rebase main || (git rebase --abort && git rebase main --skip)
-          git push --force-with-lease
-
+          git push origin main-audio
