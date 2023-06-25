@@ -133,6 +133,26 @@
     "value": true,
     "text": "Show gpu graph"
   },
+  "label-audio": {
+    "type": "label",
+    "value": "------ Audio settings ------"
+  },
+  "audio-play": {
+    "type": "checkbox",
+    "value": false,
+    "text": "Play background audio"
+  },
+  "audio-tip": {
+    "type": "label",
+    "value": "Tip: Only enable this option on one wallpaper if you use\nit multiple times, otherwise the audio will sound weird."
+  },
+  "audio-volume": {
+    "max": 100,
+    "min": 0,
+    "text": "Background audio volume",
+    "type": "slider",
+    "value": 25
+  },
   "label-controls": {
     "type": "label",
     "value": "------ Panel settings ------"
