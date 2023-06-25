@@ -23,7 +23,7 @@ jobs:
       run: git checkout main-audio
 
     - name: Pull changes from main branch
-      run: git pull origin main
+      run: git pull --rebase origin main
 
     - name: Push changes to main-audio branch
       run: git push origin main-audio
