@@ -17,4 +17,5 @@ jobs:
           git fetch --all
           git checkout main-audio
           git rebase main
+          git rebase --skip
           git push origin main-audio
