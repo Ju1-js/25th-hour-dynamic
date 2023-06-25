@@ -11,11 +11,15 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        
+      - name: Configure git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
-      - name: Rebase Pull Requests
+      - name: Update main-audio branch
         run: |
           git fetch --all
           git checkout main-audio
-          git pull origin main-audio
           git rebase main
-          git push origin main-audio
+          git push --force-with-lease
