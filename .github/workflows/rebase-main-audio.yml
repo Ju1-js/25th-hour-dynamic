@@ -14,7 +14,7 @@ jobs:
 
       - name: Rebase Pull Requests
         run: |
-          git fetch --all
           git checkout main-audio
-          git rebase main --skip
+          git pull origin main-audio
+          git rebase main
           git push origin main-audio
