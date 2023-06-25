@@ -22,8 +22,8 @@ jobs:
     - name: Create and switch to main-audio branch
       run: git checkout main-audio
 
-    - name: Merge changes from main branch
-      run: git merge origin/main --no-commit
+    - name: Rebase changes from main branch
+      run: git rebase origin/main
 
     - name: Push changes to main-audio branch
       run: git push origin main-audio
